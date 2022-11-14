@@ -1,0 +1,164 @@
+{
+    "resources": {
+        "Energy resources": {
+            "Coal": [
+                "Coal",
+                0,
+                10,
+                1
+            ],
+            "Firewood": [
+                "Firewood",
+                0,
+                2,
+                1
+            ],
+            "Gas": [
+                "Gas",
+                0,
+                900,
+                1
+            ],
+            "Oil": [
+                "Oil",
+                0,
+                500,
+                1
+            ],
+            "Uran": [
+                "Uran",
+                0,
+                0,
+                0
+            ]
+        },
+        "Industrial resources": {
+            "Semiconductor": [
+                "Semiconductor",
+                0,
+                0,
+                0
+            ],
+            "Bullet": [
+                "Bullet",
+                0,
+                0,
+                0
+            ],
+            "Engine": [
+                "Engine",
+                0,
+                0,
+                0
+            ],
+            "Cement": [
+                "Cement",
+                0,
+                0,
+                0
+            ],
+            "Plastic": [
+                "Plastic",
+                0,
+                0,
+                0
+            ]
+        },
+        "Mineable resources": {
+            "Iron": [
+                "Iron",
+                0,
+                0,
+                0
+            ],
+            "Aluminium": [
+                "Aluminium",
+                0,
+                0,
+                0
+            ],
+            "Zinc": [
+                "Zinc",
+                0,
+                0,
+                0
+            ],
+            "Copper": [
+                "Copper",
+                0,
+                0,
+                0
+            ],
+            "Silicon": [
+                "Silicon",
+                0,
+                0,
+                0
+            ]
+        },
+        "Natural resources": {
+            "Wood": [
+                "Wood",
+                0,
+                0,
+                0
+            ],
+            "Wheat": [
+                "Wheat",
+                0,
+                0,
+                0
+            ],
+            "Cotton": [
+                "Cotton",
+                0,
+                0,
+                0
+            ],
+            "Soil": [
+                "Soil",
+                0,
+                0,
+                0
+            ],
+            "Water": [
+                "Water",
+                0,
+                0,
+                0
+            ]
+        },
+        "Military resources": {
+            "Plane": [
+                "Plane",
+                0,
+                0,
+                0
+            ],
+            "Tank": [
+                "Tank",
+                0,
+                0,
+                0
+            ],
+            "Drone": [
+                "Drone",
+                0,
+                0,
+                0
+            ],
+            "Rocket": [
+                "Rocket",
+                0,
+                0,
+                0
+            ],
+            "Gun": [
+                "Gun",
+                0,
+                0,
+                0
+            ]
+        }
+    }
+}

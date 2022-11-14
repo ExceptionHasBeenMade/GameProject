@@ -1,0 +1,512 @@
+{
+    "cargo": {
+        "ship_NO_1": {
+            "Coal": [
+                "Coal",
+                85000
+            ],
+            "Firewood": [
+                "Firewood",
+                15000
+            ],
+            "Gas": [
+                "Gas",
+                0
+            ],
+            "Oil": [
+                "Oil",
+                0
+            ],
+            "Uran": [
+                "Uran",
+                0
+            ],
+            "Semiconductor": [
+                "Semiconductor",
+                0
+            ],
+            "Bullet": [
+                "Bullet",
+                0
+            ],
+            "Engine": [
+                "Engine",
+                0
+            ],
+            "Cement": [
+                "Cement",
+                0
+            ],
+            "Plastic": [
+                "Plastic",
+                0
+            ],
+            "Iron": [
+                "Iron",
+                0
+            ],
+            "Aluminium": [
+                "Aluminium",
+                0
+            ],
+            "Zinc": [
+                "Zinc",
+                0
+            ],
+            "Copper": [
+                "Copper",
+                0
+            ],
+            "Silicon": [
+                "Silicon",
+                0
+            ],
+            "Wood": [
+                "Wood",
+                0
+            ],
+            "Wheat": [
+                "Wheat",
+                0
+            ],
+            "Cotton": [
+                "Cotton",
+                0
+            ],
+            "Soil": [
+                "Soil",
+                0
+            ],
+            "Water": [
+                "Water",
+                0
+            ],
+            "Plane": [
+                "Plane",
+                0
+            ],
+            "Tank": [
+                "Tank",
+                0
+            ],
+            "Drone": [
+                "Drone",
+                0
+            ],
+            "Rocket": [
+                "Rocket",
+                0
+            ],
+            "Gun": [
+                "Gun",
+                0
+            ]
+        },
+        "ship_NO_2": {
+            "Coal": [
+                "Coal",
+                0
+            ],
+            "Firewood": [
+                "Firewood",
+                0
+            ],
+            "Gas": [
+                "Gas",
+                0
+            ],
+            "Oil": [
+                "Oil",
+                0
+            ],
+            "Uran": [
+                "Uran",
+                0
+            ],
+            "Semiconductor": [
+                "Semiconductor",
+                0
+            ],
+            "Bullet": [
+                "Bullet",
+                0
+            ],
+            "Engine": [
+                "Engine",
+                0
+            ],
+            "Cement": [
+                "Cement",
+                0
+            ],
+            "Plastic": [
+                "Plastic",
+                0
+            ],
+            "Iron": [
+                "Iron",
+                0
+            ],
+            "Aluminium": [
+                "Aluminium",
+                0
+            ],
+            "Zinc": [
+                "Zinc",
+                0
+            ],
+            "Copper": [
+                "Copper",
+                0
+            ],
+            "Silicon": [
+                "Silicon",
+                0
+            ],
+            "Wood": [
+                "Wood",
+                0
+            ],
+            "Wheat": [
+                "Wheat",
+                0
+            ],
+            "Cotton": [
+                "Cotton",
+                0
+            ],
+            "Soil": [
+                "Soil",
+                0
+            ],
+            "Water": [
+                "Water",
+                0
+            ],
+            "Plane": [
+                "Plane",
+                0
+            ],
+            "Tank": [
+                "Tank",
+                0
+            ],
+            "Drone": [
+                "Drone",
+                0
+            ],
+            "Rocket": [
+                "Rocket",
+                0
+            ],
+            "Gun": [
+                "Gun",
+                0
+            ]
+        },
+        "airplane_NO_1": [
+            {
+                "Coal": [
+                    "Coal",
+                    0
+                ]
+            },
+            {
+                "Firewood": [
+                    "Firewood",
+                    0
+                ]
+            },
+            {
+                "Gas": [
+                    "Gas",
+                    0
+                ]
+            },
+            {
+                "Oil": [
+                    "Oil",
+                    0
+                ]
+            },
+            {
+                "Uran": [
+                    "Uran",
+                    0
+                ]
+            },
+            {
+                "Semiconductor": [
+                    "Semiconductor",
+                    0
+                ]
+            },
+            {
+                "Bullet": [
+                    "Bullet",
+                    0
+                ]
+            },
+            {
+                "Engine": [
+                    "Engine",
+                    0
+                ]
+            },
+            {
+                "Cement": [
+                    "Cement",
+                    0
+                ]
+            },
+            {
+                "Plastic": [
+                    "Plastic",
+                    0
+                ]
+            },
+            {
+                "Iron": [
+                    "Iron",
+                    0
+                ]
+            },
+            {
+                "Aluminium": [
+                    "Aluminium",
+                    0
+                ]
+            },
+            {
+                "Zinc": [
+                    "Zinc",
+                    0
+                ]
+            },
+            {
+                "Copper": [
+                    "Copper",
+                    0
+                ]
+            },
+            {
+                "Silicon": [
+                    "Silicon",
+                    0
+                ]
+            },
+            {
+                "Wood": [
+                    "Wood",
+                    0
+                ]
+            },
+            {
+                "Wheat": [
+                    "Wheat",
+                    0
+                ]
+            },
+            {
+                "Cotton": [
+                    "Cotton",
+                    0
+                ]
+            },
+            {
+                "Soil": [
+                    "Soil",
+                    0
+                ]
+            },
+            {
+                "Water": [
+                    "Water",
+                    0
+                ]
+            },
+            {
+                "Plane": [
+                    "Plane",
+                    0
+                ]
+            },
+            {
+                "Tank": [
+                    "Tank",
+                    0
+                ]
+            },
+            {
+                "Drone": [
+                    "Drone",
+                    0
+                ]
+            },
+            {
+                "Rocket": [
+                    "Rocket",
+                    0
+                ]
+            },
+            {
+                "Gun": [
+                    "Gun",
+                    0
+                ]
+            }
+        ],
+        "airplane_NO_2": [
+            {
+                "Coal": [
+                    "Coal",
+                    0
+                ]
+            },
+            {
+                "Firewood": [
+                    "Firewood",
+                    0
+                ]
+            },
+            {
+                "Gas": [
+                    "Gas",
+                    0
+                ]
+            },
+            {
+                "Oil": [
+                    "Oil",
+                    0
+                ]
+            },
+            {
+                "Uran": [
+                    "Uran",
+                    0
+                ]
+            },
+            {
+                "Semiconductor": [
+                    "Semiconductor",
+                    0
+                ]
+            },
+            {
+                "Bullet": [
+                    "Bullet",
+                    0
+                ]
+            },
+            {
+                "Engine": [
+                    "Engine",
+                    0
+                ]
+            },
+            {
+                "Cement": [
+                    "Cement",
+                    0
+                ]
+            },
+            {
+                "Plastic": [
+                    "Plastic",
+                    0
+                ]
+            },
+            {
+                "Iron": [
+                    "Iron",
+                    0
+                ]
+            },
+            {
+                "Aluminium": [
+                    "Aluminium",
+                    0
+                ]
+            },
+            {
+                "Zinc": [
+                    "Zinc",
+                    0
+                ]
+            },
+            {
+                "Copper": [
+                    "Copper",
+                    0
+                ]
+            },
+            {
+                "Silicon": [
+                    "Silicon",
+                    0
+                ]
+            },
+            {
+                "Wood": [
+                    "Wood",
+                    0
+                ]
+            },
+            {
+                "Wheat": [
+                    "Wheat",
+                    0
+                ]
+            },
+            {
+                "Cotton": [
+                    "Cotton",
+                    0
+                ]
+            },
+            {
+                "Soil": [
+                    "Soil",
+                    0
+                ]
+            },
+            {
+                "Water": [
+                    "Water",
+                    0
+                ]
+            },
+            {
+                "Plane": [
+                    "Plane",
+                    0
+                ]
+            },
+            {
+                "Tank": [
+                    "Tank",
+                    0
+                ]
+            },
+            {
+                "Drone": [
+                    "Drone",
+                    0
+                ]
+            },
+            {
+                "Rocket": [
+                    "Rocket",
+                    0
+                ]
+            },
+            {
+                "Gun": [
+                    "Gun",
+                    0
+                ]
+            }
+        ]
+    }
+}
