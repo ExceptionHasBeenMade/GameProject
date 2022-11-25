@@ -1,4 +1,4 @@
-import json, time, os, keyboard, math
+import json#, time, os, keyboard, math
 
 pathOfConveyance = "./data/conveyance.json"
 pathOfHarbors = "./data/harbors.json"
