@@ -3,12 +3,12 @@ from Modules.modules import nextTurn, jsonClosing, freeSpaceCounter
 
 os.system("cls")
 
-pathOfConveyance = "./data/conveyance.json"
-pathOfHarbors = "./data/harbors.json"
-pathOfResources = "./data/resources.json"
-pathOfSettings = "./data/settings.json"
-pathOfOwns = "./data/owns.json"
-pathOfCargo = "./data/cargo.json"
+pathOfConveyance = "./GameProject/data/conveyance.json"
+pathOfHarbors = "./GameProject/data/harbors.json"
+pathOfResources = "./GameProject/data/resources.json"
+pathOfSettings = "./GameProject/data/settings.json"
+pathOfOwns = "./GameProject/data/owns.json"
+pathOfCargo = "./GameProject/data/cargo.json"
 
 connector = open(pathOfResources)
 importedResources = json.load(connector)
@@ -86,22 +86,6 @@ while True:
     print("")
     while True:
         if(keyboard.is_pressed(m1)):
-            choice = "1"
-            break
-        elif(keyboard.is_pressed(m2)):
-            choice = "2"
-            break
-        elif(keyboard.is_pressed(m3)):
-            choice = "3"
-            break
-        elif(keyboard.is_pressed(m4)):
-            choice = "4"
-            break
-        elif(keyboard.is_pressed("Escape")):
-            choice = "7"
-            break
-    match choice:
-        case "1":
             time.sleep(0.2)
             i = 2
             while True:
@@ -205,6 +189,21 @@ while True:
                 if(i == 3):
                     i = 0
                     break
+        elif(keyboard.is_pressed(m2)):
+            choice = "2"
+            break
+        elif(keyboard.is_pressed(m3)):
+            choice = "3"
+            break
+        elif(keyboard.is_pressed(m4)):
+            choice = "4"
+            break
+        elif(keyboard.is_pressed("Escape")):
+            choice = "7"
+            break
+    match choice:
+        case "1":
+            pass
         case "2":
             broken = False
             time.sleep(0.2)

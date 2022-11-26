@@ -1,11 +1,11 @@
 import json#, time, os, keyboard, math
 
-pathOfConveyance = "./data/conveyance.json"
-pathOfHarbors = "./data/harbors.json"
-pathOfResources = "./data/resources.json"
-pathOfSettings = "./data/settings.json"
-pathOfOwns = "./data/owns.json"
-pathOfCargo = "./data/cargo.json"
+pathOfConveyance = "./GameProject/data/conveyance.json"
+pathOfHarbors = "./GameProject/data/harbors.json"
+pathOfResources = "./GameProject/data/resources.json"
+pathOfSettings = "./GameProject/data/settings.json"
+pathOfOwns = "./GameProject/data/owns.json"
+pathOfCargo = "./GameProject/data/cargo.json"
 
 connector = open(pathOfResources)
 importedResources = json.load(connector)
