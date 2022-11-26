@@ -1,4 +1,4 @@
-import json, time, os, keyboard, math
+import json, time, os, keyboard, math, threading
 from Modules.modules import nextTurn, jsonClosing, freeSpaceCounter
 
 os.system("cls")
@@ -89,6 +89,9 @@ while True:
             time.sleep(0.2)
             i = 2
             while True:
+                if(broken):
+                    broken = False
+                    break
                 os.system("cls")
                 print(" = Your resources = \n")
                 print("M1.> Energy resources    ")
@@ -102,7 +105,7 @@ while True:
                         i = 1
                         break
                     elif(keyboard.is_pressed("esc")):
-                        i = 3
+                        broken = True
                         break
                     elif(keyboard.is_pressed(m1)):
                         os.system("cls")
@@ -190,21 +193,6 @@ while True:
                     i = 0
                     break
         elif(keyboard.is_pressed(m2)):
-            choice = "2"
-            break
-        elif(keyboard.is_pressed(m3)):
-            choice = "3"
-            break
-        elif(keyboard.is_pressed(m4)):
-            choice = "4"
-            break
-        elif(keyboard.is_pressed("Escape")):
-            choice = "7"
-            break
-    match choice:
-        case "1":
-            pass
-        case "2":
             broken = False
             time.sleep(0.2)
             while True:
@@ -588,7 +576,7 @@ while True:
                         pass
                     elif(conveyanceChoice == "4"):
                         pass
-        case "3":
+        elif(keyboard.is_pressed(m3)):
             time.sleep(0.2)
             while True:
                 if(broken == True):
@@ -605,7 +593,7 @@ while True:
                     elif(keyboard.is_pressed("esc")):
                         broken = True
                         break
-        case "4":
+        elif(keyboard.is_pressed(m4)):
             time.sleep(0.1)
             while True:
                 if(broken == True):
@@ -714,17 +702,18 @@ while True:
                     elif(keyboard.is_pressed("esc")):
                         broken = True
                         break
-        case "7":
+        elif(keyboard.is_pressed("Escape")):
             broken = False
             os.system("cls")
+            time.sleep(0.2)
             print("Quit? \n(Enter/Escape)")
             while True:
-                if(keyboard.is_pressed("Enter")):
+                if(keyboard.is_pressed("enter")):
+                    exit()
+                elif(keyboard.is_pressed("escape")):
+                    time.sleep(0.2)
                     broken = True
                     break
-                elif(keyboard.is_pressed("Escape")):
-                    time.sleep(0.2)
-                    break
             if(broken == True):
-                broken == False
+                broken = False
                 break
