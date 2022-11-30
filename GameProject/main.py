@@ -74,7 +74,7 @@ if True:
 while True:
     os.system("cls")
     time.sleep(0.2)
-    print(" === Country information panel === ")
+    print(" === Information panel === ")
     print("")
     print("M1. == Resources informations == ")
     print("M2. == Transport details == ")
