@@ -78,9 +78,10 @@ while True:
     print("")
     print("M1. == Resources informations == ")
     print("M2. == Transport details == ")
-    print("M3. == Pass time == ")
+    print("M3. == Shop ==")
+    print("M5. == Pass time == ")
     print("")
-    print("M4. == Settings == ")
+    print("M6. == Settings == ")
     print("")
     print("Esc. == Exit ==")
     print("")
@@ -94,11 +95,11 @@ while True:
                     break
                 os.system("cls")
                 print(" = Your resources = \n")
-                print("M1.> Energy resources    ")
+                print("M1.> Energy resources")
                 print("M2.> Industrial resources")
-                print("M3.> Mineable resources  ")
-                print("M4.> Natural resources   ")
-                print("M5.> Military resources  \n")
+                print("M3.> Mineable resources")
+                print("M4.> Natural resources")
+                print("M5.> Military resources\n")
                 print("Press nubmer of resources type you want to see details or press esc to exit")
                 while True:
                     if(i == 0):
@@ -577,6 +578,12 @@ while True:
                     elif(conveyanceChoice == "4"):
                         pass
         elif(keyboard.is_pressed(m3)):
+            broken = False
+            time.sleep(0.2)
+            while True:
+                os.system("cls")
+                print()
+        elif(keyboard.is_pressed(m5)):
             time.sleep(0.2)
             while True:
                 if(broken == True):
@@ -593,7 +600,7 @@ while True:
                     elif(keyboard.is_pressed("esc")):
                         broken = True
                         break
-        elif(keyboard.is_pressed(m4)):
+        elif(keyboard.is_pressed(m6)):
             time.sleep(0.1)
             while True:
                 if(broken == True):
