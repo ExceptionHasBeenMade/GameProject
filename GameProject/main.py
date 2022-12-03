@@ -1,4 +1,4 @@
-import json, time, os, keyboard, math, threading
+import json, time, os, keyboard, math#, threading
 from Modules.modules import nextTurn, jsonClosing, freeSpaceCounter
 
 os.system("cls")
@@ -549,6 +549,8 @@ while True:
                                                         input()
                                                     else:
                                                         i+=1
+                                    elif(keyboard.is_pressed(m3)):
+                                        break
                                 if(broken == True):
                                     break
                         elif(shipNo1Destination == "None" and shipNo1IsLoading == True):
