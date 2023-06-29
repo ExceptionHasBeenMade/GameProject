@@ -1,7 +1,5 @@
-import json, time, os, keyboard, math#, threading
+import json, time, os, keyboard, math, multiprocessing
 from Modules.modules import nextTurn, jsonClosing, freeSpaceCounter
-
-os.system("cls")
 
 pathOfConveyance = "./GameProject/data/conveyance.json"
 pathOfHarbors = "./GameProject/data/harbors.json"
@@ -513,7 +511,6 @@ while True:
                                                                     if(importedConveyance["conveyance"]["ship_NO_1"][5] == 0):
                                                                         print("You can't load more")
                                                                         time.sleep(1.5)
-                                                                        # needToExit = True
                                                                     break
                                                             i+=1
                                                 else:
@@ -554,22 +551,23 @@ while True:
                                 if(broken == True):
                                     break
                         elif(shipNo1Destination == "None" and shipNo1IsLoading == True):
-                            multiplier = importedConveyance["conveyance"]["ship_NO_1"][4]
-                            rlt = multiplier * 120
-                            for second in range(int(rlt)):
-                                print("This ship is actually busy and will be ready in " + str(rlt) + " seconds")
-                                time.sleep(1)
-                                rlt = rlt - 1
-                                os.system("cls")
-                                shipNo1IsLoading = False
-                                if(keyboard.is_pressed("esc")):
-                                    shipNo1IsLoading = True
-                                    broken = True
-                                    break
-                            importedConveyance["conveyance"]["ship_NO_1"][4] = rlt/120
-                            if(importedConveyance["conveyance"]["ship_NO_1"][4] == 0.0):
-                                importedConveyance["conveyance"]["ship_NO_1"][3] = False
-                            jsonClosing(importedConveyance, pathOfConveyance)
+                            if(input("Proceed disembarking(Y/N)").lower() == "y"):
+                                multiplier = importedConveyance["conveyance"]["ship_NO_1"][4]
+                                rlt = multiplier * 120
+                                for second in range(int(rlt)):
+                                    print("This ship is actually busy and will be ready in " + str(rlt) + " seconds")
+                                    time.sleep(1)
+                                    rlt = rlt - 1
+                                    os.system("cls")
+                                    shipNo1IsLoading = False
+                                    if(keyboard.is_pressed("esc")):
+                                        shipNo1IsLoading = True
+                                        broken = True
+                                        break
+                                importedConveyance["conveyance"]["ship_NO_1"][4] = rlt/120
+                                if(importedConveyance["conveyance"]["ship_NO_1"][4] == 0.0):
+                                    importedConveyance["conveyance"]["ship_NO_1"][3] = False
+                                jsonClosing(importedConveyance, pathOfConveyance)
                     if(broken == True):
                         broken = False
                         break

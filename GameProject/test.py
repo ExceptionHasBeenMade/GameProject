@@ -5,27 +5,31 @@
 # jsonClosing(importedConveyance, pathOfConveyance)
 # jsonClosing(importedOwns, pathOfOwns)
 
-# x = 5
-# for i in range(x):
-#     print(i+1)
+import multiprocessing
+import os
 
-import threading
-import time
-  
-def print_project():
-    for i in range(5):
+def worker1():
+    print("ID of process running worker1: {}".format(os.getpid()))
+                   
+def worker2():
+    print("ID of process running worker2: {}".format(os.getpid()))
+                   
+if __name__ == "__main__":
+    print("ID of main process: {}".format(os.getpid()))
 
-        time.sleep(1)
-        print("project")
-  
-def print_natural():
-    for i in range(5):
-        #the current thread is suspended
-        time.sleep(1.5)
-        print("natural")
-  
+    p1 = multiprocessing.Process(target=worker1)
+    p2 = multiprocessing.Process(target=worker2)
 
-t1 = threading.Thread(target=print_project)
-t2 = threading.Thread(target=print_natural)
-t1.start()
-t2.start()
+    p1.start()
+    p2.start()
+
+    print("ID of process p1: {}".format(p1.pid))
+    print("ID of process p2: {}".format(p2.pid))
+
+    p1.join()
+    p2.join()
+
+    print("Both processes finished execution!")
+    print("Process p1 is alive: {}".format(p1.is_alive()))
+    print("Process p2 is alive: {}".format(p2.is_alive()))
+
