@@ -46,11 +46,16 @@ harborsList = importedHarbors["alls"]
 money = importedOwns["player"]["money"][0]
 broken = False
 broken1 = False
+definitiveBroken = False
 maxCapacity = 100000
 
 x = 0
 i = 0
-if True:
+
+def reload():
+    global shipNo1Name, shipNo1Place, shipNo1Destination, shipNo1IsLoading, shipNo1Cargo
+    global shipNo2Name, shipNo2Place, shipNo2Destination, shipNo2IsLoading, shipNo2Cargo
+
     shipNo1Name = importedConveyance["conveyance"]["ship_NO_1"][0]
     shipNo1Place = str(importedConveyance["conveyance"]["ship_NO_1"][1])
     if(importedConveyance["conveyance"]["ship_NO_1"][2] == "None"):
@@ -68,6 +73,8 @@ if True:
         shipNo2Destination = importedConveyance["conveyance"]["ship_NO_2"][2]
     shipNo2IsLoading = importedConveyance["conveyance"]["ship_NO_2"][3]
     shipNo2Cargo = importedConveyance["conveyance"]["ship_NO_2"][5]
+
+reload()
 
 while True:
     os.system("cls")
@@ -195,6 +202,7 @@ while True:
             broken = False
             time.sleep(0.2)
             while True:
+                reload()
                 os.system("cls")
                 print(" == Transport == ")
                 print("")
@@ -235,8 +243,9 @@ while True:
                     break
                 i = 0
                 while True:
-                    if(broken == True):
+                    if(broken == True or definitiveBroken == True):
                         broken = False
+                        definitiveBroken = False
                         break
                     os.system("cls")
                     if(conveyanceChoice == "1"):
@@ -247,6 +256,8 @@ while True:
                             break
                         elif(shipNo1Destination == "None" and shipNo1IsLoading == False):
                             while True:
+                                if(definitiveBroken == True):
+                                    break
                                 os.system("cls")
                                 print(" = Ship is ready to put out = \n")
                                 print("M1.> Put it out to")
@@ -255,6 +266,8 @@ while True:
                                 print("")
                                 print("Press number of thing you want to do or exit by pressing esc")
                                 while True:
+                                    if(definitiveBroken == True):
+                                        break
                                     if(broken == True or broken1 == True):
                                         broken1 = False
                                         broken = False
@@ -264,6 +277,8 @@ while True:
                                         break
                                     elif(keyboard.is_pressed(m1)):
                                         while True:
+                                            if(definitiveBroken == True):
+                                                break
                                             if(broken == True):
                                                 broken = False
                                                 break
@@ -279,8 +294,6 @@ while True:
                                             print("")
                                             i = 0
                                             voyageDest = input()
-                                            if(voyageDest == "exit"):
-                                                break
                                             if(voyageDest == "esc" or voyageDest == "exit"):
                                                 broken = True
                                                 break
@@ -336,6 +349,8 @@ while True:
                                                         dest1 = ["Sydney", 20]
                                                 i = 0
                                                 while True:
+                                                    if(definitiveBroken == True):
+                                                        break
                                                     if(broken == True):
                                                         broken = False
                                                         break
@@ -360,6 +375,8 @@ while True:
                                                         print(" >>  PROCEED  <<  > Enter")
                                                         print(" >>  EXIT     <<  > Escape")
                                                         while True:
+                                                            if(definitiveBroken == True):
+                                                                break
                                                             if(keyboard.is_pressed("esc")):
                                                                 broken = True
                                                                 break
@@ -375,6 +392,9 @@ while True:
                                                                 voyageDest = "exit"
                                                                 time.sleep(1.5)
                                                                 break
+                                                        if(voyageDest == "exit"):
+                                                            definitiveBroken = True
+                                                            break
                                                     else:
                                                         print("You haven't enought money to proceed")
                                                         time.sleep(1.5)
@@ -535,9 +555,9 @@ while True:
                                 if(importedConveyance["conveyance"]["ship_NO_1"][4] == 0.0):
                                     importedConveyance["conveyance"]["ship_NO_1"][3] = False
                                 jsonClosing(importedConveyance, pathOfConveyance)
-                    if(broken == True):
-                        broken = False
-                        break
+                            if(broken == True):
+                                broken = False
+                                break
                     elif(conveyanceChoice == "2"):
                         pass
                     elif(conveyanceChoice == "3"):
