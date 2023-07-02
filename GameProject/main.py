@@ -340,11 +340,7 @@ while True:
                                                         broken = False
                                                         break
                                                     os.system("cls")
-                                                    for workpl in importedHarbors["alls"][actualPlace1]:
-                                                        palace = workpl[0]
-                                                        if(palace == dest1[0]):
-                                                            precisely = importedHarbors["alls"][actualPlace1][dest1[1]]
-                                                    # precisely = importedHarbors["alls"][actualPlace1][dest1[1]]
+                                                    precisely = importedHarbors["alls"][actualPlace1][dest1[1]]
                                                     for x in precisely:
                                                         eta = precisely[x]
                                                     costs = int(eta[1])*420
