@@ -210,6 +210,7 @@ while True:
                     print("This ship is in the " + shipNo2Place)
                 else:
                     print("This ship is " + str(shipNo2Place) + (" turns" if int(shipNo2Place)>1 else " turn") + " far from " + shipNo2Destination)
+                print("")
                 print(" = Airplanes = ")
                 print("")
                 print("Press number of conveyance you want to see details or press esc to exit")
@@ -272,49 +273,6 @@ while True:
                                             i = 1
                                             for port in importedHarbors["alls"]:
                                                 print(str(i) + ".> Send ship to " + port)
-                                                if True:
-                                                    if(i == 1):
-                                                        a1 = port
-                                                    elif(i == 2):
-                                                        a2 = port
-                                                    elif(i == 3):
-                                                        a3 = port
-                                                    elif(i == 4):
-                                                        a4 = port
-                                                    elif(i == 5):
-                                                        a5 = port
-                                                    elif(i == 6):
-                                                        a6 = port
-                                                    elif(i == 7):
-                                                        a7 = port
-                                                    elif(i == 8):
-                                                        a8 = port
-                                                    elif(i == 9):
-                                                        a9 = port
-                                                    elif(i == 10):
-                                                        a10 = port
-                                                    elif(i == 11):
-                                                        a11 = port
-                                                    elif(i == 12):
-                                                        a12 = port
-                                                    elif(i == 13):
-                                                        a13 = port
-                                                    elif(i == 14):
-                                                        a14 = port
-                                                    elif(i == 15):
-                                                        a15 = port
-                                                    elif(i == 16):
-                                                        a16 = port
-                                                    elif(i == 17):
-                                                        a17 = port
-                                                    elif(i == 18):
-                                                        a18 = port
-                                                    elif(i == 19):
-                                                        a19 = port
-                                                    elif(i == 20):
-                                                        a20 = port
-                                                    elif(i == 21):
-                                                        a21 = port
                                                 i+=1
                                                 if(i == 22):
                                                     break
@@ -330,6 +288,7 @@ while True:
                                                 print("Wrong destination entered")
                                                 time.sleep(1.5)
                                                 continue
+
                                             if(int(voyageDest) >= 1 and int(voyageDest) <= 21):
                                                 i = int(voyageDest)
                                                 if True:
@@ -381,7 +340,11 @@ while True:
                                                         broken = False
                                                         break
                                                     os.system("cls")
-                                                    precisely = importedHarbors["alls"][actualPlace1][dest1[1]]
+                                                    for workpl in importedHarbors["alls"][actualPlace1]:
+                                                        palace = workpl[0]
+                                                        if(palace == dest1[0]):
+                                                            precisely = importedHarbors["alls"][actualPlace1][dest1[1]]
+                                                    # precisely = importedHarbors["alls"][actualPlace1][dest1[1]]
                                                     for x in precisely:
                                                         eta = precisely[x]
                                                     costs = int(eta[1])*420
@@ -414,6 +377,8 @@ while True:
                                                         break
                                             else:
                                                 break
+
+
                                     elif(keyboard.is_pressed(m2)):
                                         while True:
                                             os.system("cls")
