@@ -344,6 +344,14 @@ while True:
                                                     for x in precisely:
                                                         eta = precisely[x]
                                                     costs = int(eta[1])*420
+                                                    if(eta[1] == "0"):
+                                                        print("This destination is where you actually are, proceed? (Y/N: )")
+                                                        etaZero = input()
+                                                        if(etaZero == "Y" or etaZero == "y"):
+                                                            costs = 100
+                                                            os.system("cls")
+                                                        else:
+                                                            break
                                                     time.sleep(0.2)
                                                     if(costs <= money):
                                                         print(" = Details of sail from " + actualPlace1 + " to " + str(dest1[0]) + " = \n")
@@ -368,7 +376,7 @@ while True:
                                                                 time.sleep(1.5)
                                                                 break
                                                     else:
-                                                        print("You haven't enought money to proceed it")
+                                                        print("You haven't enought money to proceed")
                                                         time.sleep(1.5)
                                                         break
                                             else:
