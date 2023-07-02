@@ -381,8 +381,6 @@ while True:
                                                         break
                                             else:
                                                 break
-
-
                                     elif(keyboard.is_pressed(m2)):
                                         while True:
                                             os.system("cls")
