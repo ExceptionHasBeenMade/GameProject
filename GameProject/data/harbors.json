@@ -2,6 +2,12 @@
     "alls": {
         "Gdansk": [
             {
+                "Gdansk": [
+                    "Gdansk",
+                    "0"
+                ]
+            },
+            {
                 "Felixstowe": [
                     "Felixstowe",
                     "3"
@@ -127,6 +133,12 @@
                 "Gdansk": [
                     "Gdansk",
                     "3"
+                ]
+            },
+            {
+                "Felixstowe": [
+                    "Felixstowe",
+                    "0"
                 ]
             },
             {
@@ -258,6 +270,12 @@
                 ]
             },
             {
+                "Rotterdam": [
+                    "Rotterdam",
+                    "0"
+                ]
+            },
+            {
                 "Valencia": [
                     "Valencia",
                     "4"
@@ -383,6 +401,12 @@
                 "Rotterdam": [
                     "Rotterdam",
                     "4"
+                ]
+            },
+            {
+                "Valencia": [
+                    "Valencia",
+                    "0"
                 ]
             },
             {
@@ -514,6 +538,12 @@
                 ]
             },
             {
+                "Pireus": [
+                    "Pireus",
+                    "0"
+                ]
+            },
+            {
                 "Los Angeles": [
                     "Los Angeles",
                     "10"
@@ -639,6 +669,12 @@
                 "Pireus": [
                     "Pireus",
                     "10"
+                ]
+            },
+            {
+                "Los Angeles": [
+                    "Los Angeles",
+                    "0"
                 ]
             },
             {
@@ -770,6 +806,12 @@
                 ]
             },
             {
+                "New York & New Jersey": [
+                    "New York & New Jersey",
+                    "0"
+                ]
+            },
+            {
                 "Houston": [
                     "Houston",
                     "3"
@@ -895,6 +937,12 @@
                 "New York & New Jersey": [
                     "New York & New Jersey",
                     "3"
+                ]
+            },
+            {
+                "Houston": [
+                    "Houston",
+                    "0"
                 ]
             },
             {
@@ -1026,6 +1074,12 @@
                 ]
             },
             {
+                "Vancouver": [
+                    "Vancouver",
+                    "0"
+                ]
+            },
+            {
                 "Santos": [
                     "Santos",
                     "9"
@@ -1149,6 +1203,12 @@
                 "Vancouver": [
                     "Vancouver",
                     "9"
+                ]
+            },
+            {
+                "Santos": [
+                    "Santos",
+                    "0"
                 ]
             },
             {
@@ -1280,6 +1340,12 @@
                 ]
             },
             {
+                "Callao": [
+                    "Callao",
+                    "0"
+                ]
+            },
+            {
                 "Colon": [
                     "Colon",
                     "3"
@@ -1405,6 +1471,12 @@
                 "Callao": [
                     "Callao",
                     "3"
+                ]
+            },
+            {
+                "Colon": [
+                    "Colon",
+                    "0"
                 ]
             },
             {
@@ -1536,6 +1608,12 @@
                 ]
             },
             {
+                "Shanghai": [
+                    "Shanghai",
+                    "0"
+                ]
+            },
+            {
                 "Jebel Ali": [
                     "Jebel Ali",
                     "8"
@@ -1661,6 +1739,12 @@
                 "Shanghai": [
                     "Shanghai",
                     "8"
+                ]
+            },
+            {
+                "Jebel Ali": [
+                    "Jebel Ali",
+                    "0"
                 ]
             },
             {
@@ -1792,6 +1876,12 @@
                 ]
             },
             {
+                "Mumbai": [
+                    "Mumbai",
+                    "0"
+                ]
+            },
+            {
                 "Yokohama": [
                     "Yokohama",
                     "8"
@@ -1917,6 +2007,12 @@
                 "Mumbai": [
                     "Mumbai",
                     "8"
+                ]
+            },
+            {
+                "Yokohama": [
+                    "Yokohama",
+                    "0"
                 ]
             },
             {
@@ -2048,6 +2144,12 @@
                 ]
             },
             {
+                "Tanger-Med": [
+                    "Tanger-Med",
+                    "0"
+                ]
+            },
+            {
                 "Port Said": [
                     "Port Said",
                     "2"
@@ -2173,6 +2275,12 @@
                 "Tanger-Med": [
                     "Tanger-Med",
                     "2"
+                ]
+            },
+            {
+                "Port Said": [
+                    "Port Said",
+                    "0"
                 ]
             },
             {
@@ -2304,6 +2412,12 @@
                 ]
             },
             {
+                "Durban Port": [
+                    "Durban Port",
+                    "0"
+                ]
+            },
+            {
                 "Neko": [
                     "Neko",
                     "7"
@@ -2427,6 +2541,12 @@
                 "Durban Port": [
                     "Durban Port",
                     "7"
+                ]
+            },
+            {
+                "Neko": [
+                    "Neko",
+                    "0"
                 ]
             },
             {
@@ -2554,6 +2674,12 @@
             {
                 "Neko": [
                     "Neko",
+                    "9"
+                ]
+            },
+            {
+                "Sydney": [
+                    "Sydney",
                     "9"
                 ]
             }
