@@ -515,24 +515,52 @@ while True:
                                                     if(importedCargo["cargo"]["ship_NO_1"][cargo][1] > 0):
                                                         print(str(i) + ". " + importedCargo["cargo"]["ship_NO_1"][cargo][0] + "  --  " + str(importedCargo["cargo"]["ship_NO_1"][cargo][1]) + " to disembark")
                                                         i+=1
-                                                i = 0
+                                                i = 1
                                                 disembarks = input("Enter number of what you want to disembark: ")
-                                                if(disembarks.isnumeric()):
-                                                    disembarks = int(disembarks)
-                                                elif(disembarks == "exit" or disembarks == "esc"):
+
+                                                if(disembarks == "exit" or disembarks == "esc"):
                                                     broken = True
                                                     break
+                                                elif(disembarks.isnumeric()):
+                                                    disembarks = int(disembarks)
                                                 else:
                                                     print("\nEntered wrong number")
                                                     time.sleep(1.5)
                                                     os.system("cls")
                                                     continue
-                                                for i in range(disembarks):
-                                                    if(disembarks == i+1):
-                                                        print(importedCargo["cargo"]["ship_NO_1"][i][1])
-                                                        input()
-                                                    else:
+                                                
+                                                for tempDisembarked in importedCargo["cargo"]["ship_NO_1"]:
+                                                    if(importedCargo["cargo"]["ship_NO_1"][tempDisembarked][1] > 0 and i != disembarks):
                                                         i+=1
+                                                    elif(importedCargo["cargo"]["ship_NO_1"][tempDisembarked][1] > 0 and i == disembarks):
+                                                        os.system("cls")
+                                                        print(f"How much of \"{tempDisembarked}\" you would to disembark")
+                                                        tempCargo = input(str(importedCargo["cargo"]["ship_NO_1"][tempDisembarked][1]) + "/")
+                                                        
+                                                        if(tempCargo == "exit" or tempCargo == "esc"):
+                                                            broken = True
+                                                            break
+                                                        elif(tempCargo.isnumeric()):
+                                                            tempCargo = int(tempCargo)
+                                                        else:
+                                                            print("\nEntered wrong number")
+                                                            time.sleep(1.5)
+                                                            os.system("cls")
+                                                            break
+
+                                                        if(tempCargo > importedCargo["cargo"]["ship_NO_1"][tempDisembarked][1]):
+                                                            print("You can`t disembark more than you have embarked")
+                                                            time.sleep(1)
+                                                            os.system("cls")
+                                                            break
+                                                        elif(tempCargo == 0):
+                                                            print("You can`t disembark nothing")
+                                                            time.sleep(1)
+                                                            os.system("cls")
+                                                            break
+                                                        elif(0 < tempCargo < importedCargo["cargo"]["ship_NO_1"][tempDisembarked][1]):
+                                                            
+                                                            
                                     elif(keyboard.is_pressed(m3)):
                                         break
                                 if(broken == True):
