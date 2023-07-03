@@ -405,25 +405,25 @@ while True:
                                         while True:
                                             os.system("cls")
                                             freeSpace = maxCapacity - freeSpaceCounter("ship_NO_1")
-                                            shipNo1Cargo = freeSpace
+                                            # shipNo1Cargo = freeSpace
                                             if(broken1 == True):
                                                 break
-                                            print("Free cargo space of Ship No. 1 is: " + str(shipNo1Cargo))
-                                            if(shipNo1Cargo < 0):
+                                            print("Free cargo space of Ship No. 1 is: " + str(freeSpace))
+                                            if(freeSpace < 0):
                                                 os.system("cls")
                                                 print("Error 2.01a[Wrong cargo space]")
                                                 input()
                                                 os.system("exit")
-                                            elif(shipNo1Cargo > maxCapacity):
+                                            elif(freeSpace > maxCapacity):
                                                 os.system("cls")
                                                 print("Error 2.01b[Wrong cargo space]")
                                                 input()
                                                 os.system("exit")
-                                            elif(shipNo1Cargo == maxCapacity):
+                                            elif(freeSpace == maxCapacity):
                                                 print("You can only load ship")
                                                 input()
                                                 flag = "embark"
-                                            elif(shipNo1Cargo == 0):
+                                            elif(freeSpace == 0):
                                                 print("You can only unload ship")
                                                 input()
                                                 flag = "disembark"
@@ -506,8 +506,6 @@ while True:
                                                     os.system("cls")
                                                     continue
                                             elif(flag == "disembark"):
-                                                freeSpace = maxCapacity - freeSpaceCounter("ship_NO_1")
-                                                shipNo1Cargo = freeSpace
                                                 os.system("cls")
                                                 i = 1
                                                 print("List of thing you can disembark: ")
@@ -559,7 +557,10 @@ while True:
                                                             os.system("cls")
                                                             break
                                                         elif(0 < tempCargo < importedCargo["cargo"]["ship_NO_1"][tempDisembarked][1]):
-                                                            
+                                                            importedCargo["cargo"]["ship_NO_1"][tempDisembarked][1] = importedCargo["cargo"]["ship_NO_1"][tempDisembarked][1] - tempCargo
+                                                            jsonClosing(importedCargo, pathOfCargo)
+                                                            reload()
+                                                            break
                                                             
                                     elif(keyboard.is_pressed(m3)):
                                         break
