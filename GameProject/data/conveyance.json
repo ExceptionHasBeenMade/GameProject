@@ -6,7 +6,7 @@
             "None",
             false,
             0.0,
-            5000
+            100000
         ],
         "ship_NO_2": [
             "HMM Copenhagen",
@@ -22,15 +22,15 @@
             "None",
             false,
             0,
-            50000
+            25000
         ],
         "airplane_NO_2": [
             "Airbus Beluga",
-            9,
+            2,
             "Atlanta Airport",
             false,
             0,
-            50000
+            25000
         ]
     }
 }

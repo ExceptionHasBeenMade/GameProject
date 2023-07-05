@@ -1,4 +1,4 @@
-import json, time, os, keyboard, math, multiprocessing
+import json, time, os, keyboard, math#, multiprocessing
 from Modules.modules import nextTurn, jsonClosing, freeSpaceCounter
 
 pathOfConveyance = "./GameProject/data/conveyance.json"
@@ -52,14 +52,13 @@ money = importedOwns["player"]["money"][0]
 broken = False
 broken1 = False
 definitiveBroken = False
-maxCapacity = 100000
 
 x = 0
 i = 0
 
 def reload():
-    global shipNo1Name, shipNo1Place, shipNo1Destination, shipNo1IsLoading, shipNo1Cargo
-    global shipNo2Name, shipNo2Place, shipNo2Destination, shipNo2IsLoading, shipNo2Cargo
+    global shipNo1Name, shipNo1Place, shipNo1Destination, shipNo1IsLoading, shipNo1MaxCapacity
+    global shipNo2Name, shipNo2Place, shipNo2Destination, shipNo2IsLoading, shipNo2MaxCapacity
 
     shipNo1Name = importedConveyance["conveyance"]["ship_NO_1"][0]
     shipNo1Place = str(importedConveyance["conveyance"]["ship_NO_1"][1])
@@ -68,7 +67,7 @@ def reload():
     else:
         shipNo1Destination = importedConveyance["conveyance"]["ship_NO_1"][2]
     shipNo1IsLoading = importedConveyance["conveyance"]["ship_NO_1"][3]
-    shipNo1Cargo = importedConveyance["conveyance"]["ship_NO_1"][5]
+    shipNo1MaxCapacity = importedConveyance["conveyance"]["ship_NO_1"][5]
 
     shipNo2Name = importedConveyance["conveyance"]["ship_NO_2"][0]
     shipNo2Place = str(importedConveyance["conveyance"]["ship_NO_2"][1])
@@ -77,7 +76,7 @@ def reload():
     else:
         shipNo2Destination = importedConveyance["conveyance"]["ship_NO_2"][2]
     shipNo2IsLoading = importedConveyance["conveyance"]["ship_NO_2"][3]
-    shipNo2Cargo = importedConveyance["conveyance"]["ship_NO_2"][5]
+    shipNo2MaxCapacity = importedConveyance["conveyance"]["ship_NO_2"][5]
 
 reload()
 
@@ -375,9 +374,9 @@ while True:
                                                             break
                                                     time.sleep(0.2)
                                                     if(costs <= money):
-                                                        print(" = Details of sail from " + actualPlace1 + " to " + str(dest1[0]) + " = \n")
-                                                        print("Costs: " + str(costs))
-                                                        print("ETA: " + str(eta[1]) + " weeks\n")
+                                                        print(f" = Details of sail from {actualPlace1} to {dest1[0]} = \n")
+                                                        print(f"Costs: {costs}")
+                                                        print(f"ETA: {eta[1]} weeks\n")
                                                         print(" >>  PROCEED  <<  > Enter")
                                                         print(" >>  EXIT     <<  > Escape")
                                                         while True:
@@ -394,7 +393,7 @@ while True:
                                                                 jsonClosing(importedConveyance, pathOfConveyance)
                                                                 jsonClosing(importedOwns, pathOfOwns)
                                                                 os.system("cls")
-                                                                print("This ship has been put out to " + dest1[0])
+                                                                print(f"This ship has been put out to {dest1[0]}")
                                                                 voyageDest = "exit"
                                                                 time.sleep(1.5)
                                                                 break
@@ -410,22 +409,21 @@ while True:
                                     elif(keyboard.is_pressed(m2)):
                                         while True:
                                             os.system("cls")
-                                            freeSpace = maxCapacity - freeSpaceCounter("ship_NO_1")
-                                            # shipNo1Cargo = freeSpace
+                                            freeSpace = shipNo1MaxCapacity - freeSpaceCounter("ship_NO_1")
                                             if(broken1 == True):
                                                 break
-                                            print("Free cargo space of Ship No. 1 is: " + str(freeSpace))
+                                            print(f"Free cargo space of Ship No. 1 is: {freeSpace}")
                                             if(freeSpace < 0):
                                                 os.system("cls")
                                                 print("Error 2.01a[Wrong cargo space]")
                                                 input()
                                                 os.system("exit")
-                                            elif(freeSpace > maxCapacity):
+                                            elif(freeSpace > shipNo1MaxCapacity):
                                                 os.system("cls")
                                                 print("Error 2.01b[Wrong cargo space]")
                                                 input()
                                                 os.system("exit")
-                                            elif(freeSpace == maxCapacity):
+                                            elif(freeSpace == shipNo1MaxCapacity):
                                                 print("You can only load ship")
                                                 input()
                                                 flag = "embark"
@@ -450,67 +448,80 @@ while True:
                                                         flag = None
                                                         break
                                             if(flag == "embark"):
-                                                x = 0
-                                                i = 0
-                                                for resource in importedResources["resources"]:
-                                                    x+=1
-                                                    print(str(x) + ". " + resource)
-                                                    for cargo in importedResources["resources"][resource]:
-                                                        i+=1
-                                                        print("   " + str(i) + ". " + cargo.capitalize())
-                                                x = 0
-                                                embarks = input("\nEnter number of what you want to embark: ")
-                                                if(embarks.isnumeric()):
-                                                    embarks = int(embarks)
-                                                elif(embarks == "exit" or embarks == "esc"):
-                                                    broken = True
-                                                    break
-                                                else:
-                                                    print("\nEntered wrong number")
-                                                    time.sleep(1.5)
-                                                    os.system("cls")
-                                                    continue
-                                                i = 1
-                                                broken = False
-                                                if(embarks > 0 and embarks < 26):
-                                                    for resource in importedResources["resources"]:
-                                                        if(broken == True):
-                                                                broken = False
-                                                                break
-                                                        for cargo in importedResources["resources"][resource]:
-                                                            if(broken == True):
-                                                                break
-                                                            if(i == embarks):
-                                                                i = 0
-                                                                os.system("cls")
-                                                                freeSpace = maxCapacity - freeSpaceCounter("ship_NO_1")
-                                                                print("In " + shipNo1Name + " ship is " + str(freeSpace) + " free cargo space")
-                                                                count = input("Pass count of " + str(cargo.lower()) + " you want to embark: ")
-                                                                if(count == "esc" or count == "exit"):
-                                                                    broken = True
-                                                                    break
-                                                                if(freeSpace - int(count) < 0):
-                                                                    print("\nYou haven't enought space in this ship to embark that much.")
-                                                                    time.sleep(1.5)
-                                                                    os.system("cls")
-                                                                    continue
-                                                                else:
-                                                                    importedCargo["cargo"]["ship_NO_1"][cargo][1] = importedCargo["cargo"]["ship_NO_1"][cargo][1] + int(count)
-                                                                    jsonClosing(importedCargo, pathOfCargo)
-                                                                    added = importedConveyance["conveyance"]["ship_NO_1"][5] - freeSpace
-                                                                    importedConveyance["conveyance"]["ship_NO_1"][5] = importedConveyance["conveyance"]["ship_NO_1"][5] - added
-                                                                    jsonClosing(importedConveyance, pathOfConveyance)
-                                                                    broken = True
-                                                                    if(importedConveyance["conveyance"]["ship_NO_1"][5] == 0):
-                                                                        print("You can't load more")
-                                                                        time.sleep(1.5)
-                                                                    break
-                                                            i+=1
-                                                else:
-                                                    print("\nEntered wrong number")
-                                                    time.sleep(1.5)
-                                                    os.system("cls")
-                                                    continue
+                                                os.system("cls")
+                                                print("Select option\n")
+                                                print("M1. Buy and embark")
+                                                print("M2. Embark from magazine")
+                                                print("Esc. Exit")
+                                                while True:
+                                                    if(keyboard.is_pressed(m1)):
+                                                        os.system("cls")
+                                                        x = 0
+                                                        i = 0
+                                                        for resource in importedResources["resources"]:
+                                                            x+=1
+                                                            print(f"{x}. {resource}")
+                                                            for cargo in importedResources["resources"][resource]:
+                                                                i+=1
+                                                                print(f"   {i}. {cargo.capitalize()}")
+                                                        x = 0
+                                                        embarks = input("\nEnter number of what you want to embark: ")
+                                                        if(embarks.isnumeric()):
+                                                            embarks = int(embarks)
+                                                        elif(embarks == "exit" or embarks == "esc"):
+                                                            broken = True
+                                                            break
+                                                        else:
+                                                            print("\nEntered wrong number")
+                                                            time.sleep(1.5)
+                                                            os.system("cls")
+                                                            continue
+                                                        i = 1
+                                                        broken = False
+                                                        if(embarks >= 1 and embarks <= 25):
+                                                            for resource in importedResources["resources"]:
+                                                                if(broken == True):
+                                                                        broken = False
+                                                                        break
+                                                                for cargo in importedResources["resources"][resource]:
+                                                                    if(broken == True):
+                                                                        break
+                                                                    if(i == embarks):
+                                                                        i = 0
+                                                                        os.system("cls")
+                                                                        freeSpace = shipNo1MaxCapacity - freeSpaceCounter("ship_NO_1")
+                                                                        print(f"In {shipNo1Name} ship is {freeSpace} free cargo space")
+                                                                        count = input(f"Pass count of {cargo.lower()} you want to embark: ")
+                                                                        if(count == "esc" or count == "exit"):
+                                                                            broken = True
+                                                                            break
+                                                                        elif(count.isnumeric()):
+                                                                            count = int(count)
+                                                                        if(freeSpace - count < 0):
+                                                                            print("\nYou haven't enought space in this ship to embark that much.")
+                                                                            time.sleep(1.5)
+                                                                            os.system("cls")
+                                                                            continue
+                                                                        else:
+                                                                            importedCargo["cargo"]["ship_NO_1"][cargo][1] = importedCargo["cargo"]["ship_NO_1"][cargo][1] + count
+                                                                            jsonClosing(importedCargo, pathOfCargo)
+                                                                            broken = True
+                                                                            if(freeSpace == 0):
+                                                                                print("You can't load more")
+                                                                                time.sleep(1.5)
+                                                                            break
+                                                                    i+=1
+                                                        else:
+                                                            print("\nEntered wrong number")
+                                                            time.sleep(1.5)
+                                                            os.system("cls")
+                                                            continue
+                                                    elif(keyboard.is_pressed(m2)):
+                                                        os.system("cls")
+                                                    elif(keyboard.is_pressed("esc")):
+                                                        # broken1 = True
+                                                        break
+                                                
                                             elif(flag == "disembark"):
                                                 os.system("cls")
                                                 i = 1
