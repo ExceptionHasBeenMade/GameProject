@@ -1,1 +1,781 @@
-{}
+{
+    "magazine": {
+        "Gdansk": {
+            "Energy resources": {
+                "Coal": 0,
+                "Firewood": 0,
+                "Gas": 0,
+                "Oil": 0,
+                "Uran": 0
+            },
+            "Industrial resources": {
+                "Semiconductor": 0,
+                "Bullet": 0,
+                "Engine": 0,
+                "Cement": 0,
+                "Plastic": 0
+            },
+            "Mineable resources": {
+                "Iron": 0,
+                "Aluminium": 0,
+                "Zinc": 0,
+                "Copper": 0,
+                "Silicon": 0
+            },
+            "Natural resources": {
+                "Wood": 0,
+                "Wheat": 0,
+                "Cotton": 0,
+                "Soil": 0,
+                "Water": 0
+            },
+            "Military resources": {
+                "Plane": 0,
+                "Tank": 0,
+                "Drone": 0,
+                "Rocket": 0,
+                "Gun": 0
+            }
+        },
+        "Felixstowe": {
+            "Energy resources": {
+                "Coal": 0,
+                "Firewood": 0,
+                "Gas": 0,
+                "Oil": 0,
+                "Uran": 0
+            },
+            "Industrial resources": {
+                "Semiconductor": 0,
+                "Bullet": 0,
+                "Engine": 0,
+                "Cement": 0,
+                "Plastic": 0
+            },
+            "Mineable resources": {
+                "Iron": 0,
+                "Aluminium": 0,
+                "Zinc": 0,
+                "Copper": 0,
+                "Silicon": 0
+            },
+            "Natural resources": {
+                "Wood": 0,
+                "Wheat": 0,
+                "Cotton": 0,
+                "Soil": 0,
+                "Water": 0
+            },
+            "Military resources": {
+                "Plane": 0,
+                "Tank": 0,
+                "Drone": 0,
+                "Rocket": 0,
+                "Gun": 0
+            }
+        },
+        "Rotterdam": {
+            "Energy resources": {
+                "Coal": 0,
+                "Firewood": 0,
+                "Gas": 0,
+                "Oil": 0,
+                "Uran": 0
+            },
+            "Industrial resources": {
+                "Semiconductor": 0,
+                "Bullet": 0,
+                "Engine": 0,
+                "Cement": 0,
+                "Plastic": 0
+            },
+            "Mineable resources": {
+                "Iron": 0,
+                "Aluminium": 0,
+                "Zinc": 0,
+                "Copper": 0,
+                "Silicon": 0
+            },
+            "Natural resources": {
+                "Wood": 0,
+                "Wheat": 0,
+                "Cotton": 0,
+                "Soil": 0,
+                "Water": 0
+            },
+            "Military resources": {
+                "Plane": 0,
+                "Tank": 0,
+                "Drone": 0,
+                "Rocket": 0,
+                "Gun": 0
+            }
+        },
+        "Valencia": {
+            "Energy resources": {
+                "Coal": 0,
+                "Firewood": 0,
+                "Gas": 0,
+                "Oil": 0,
+                "Uran": 0
+            },
+            "Industrial resources": {
+                "Semiconductor": 0,
+                "Bullet": 0,
+                "Engine": 0,
+                "Cement": 0,
+                "Plastic": 0
+            },
+            "Mineable resources": {
+                "Iron": 0,
+                "Aluminium": 0,
+                "Zinc": 0,
+                "Copper": 0,
+                "Silicon": 0
+            },
+            "Natural resources": {
+                "Wood": 0,
+                "Wheat": 0,
+                "Cotton": 0,
+                "Soil": 0,
+                "Water": 0
+            },
+            "Military resources": {
+                "Plane": 0,
+                "Tank": 0,
+                "Drone": 0,
+                "Rocket": 0,
+                "Gun": 0
+            }
+        },
+        "Pireus": {
+            "Energy resources": {
+                "Coal": 0,
+                "Firewood": 0,
+                "Gas": 0,
+                "Oil": 0,
+                "Uran": 0
+            },
+            "Industrial resources": {
+                "Semiconductor": 0,
+                "Bullet": 0,
+                "Engine": 0,
+                "Cement": 0,
+                "Plastic": 0
+            },
+            "Mineable resources": {
+                "Iron": 0,
+                "Aluminium": 0,
+                "Zinc": 0,
+                "Copper": 0,
+                "Silicon": 0
+            },
+            "Natural resources": {
+                "Wood": 0,
+                "Wheat": 0,
+                "Cotton": 0,
+                "Soil": 0,
+                "Water": 0
+            },
+            "Military resources": {
+                "Plane": 0,
+                "Tank": 0,
+                "Drone": 0,
+                "Rocket": 0,
+                "Gun": 0
+            }
+        },
+        "Los Angeles": {
+            "Energy resources": {
+                "Coal": 0,
+                "Firewood": 0,
+                "Gas": 0,
+                "Oil": 0,
+                "Uran": 0
+            },
+            "Industrial resources": {
+                "Semiconductor": 0,
+                "Bullet": 0,
+                "Engine": 0,
+                "Cement": 0,
+                "Plastic": 0
+            },
+            "Mineable resources": {
+                "Iron": 0,
+                "Aluminium": 0,
+                "Zinc": 0,
+                "Copper": 0,
+                "Silicon": 0
+            },
+            "Natural resources": {
+                "Wood": 0,
+                "Wheat": 0,
+                "Cotton": 0,
+                "Soil": 0,
+                "Water": 0
+            },
+            "Military resources": {
+                "Plane": 0,
+                "Tank": 0,
+                "Drone": 0,
+                "Rocket": 0,
+                "Gun": 0
+            }
+        },
+        "New York & New Jersey": {
+            "Energy resources": {
+                "Coal": 0,
+                "Firewood": 0,
+                "Gas": 0,
+                "Oil": 0,
+                "Uran": 0
+            },
+            "Industrial resources": {
+                "Semiconductor": 0,
+                "Bullet": 0,
+                "Engine": 0,
+                "Cement": 0,
+                "Plastic": 0
+            },
+            "Mineable resources": {
+                "Iron": 0,
+                "Aluminium": 0,
+                "Zinc": 0,
+                "Copper": 0,
+                "Silicon": 0
+            },
+            "Natural resources": {
+                "Wood": 0,
+                "Wheat": 0,
+                "Cotton": 0,
+                "Soil": 0,
+                "Water": 0
+            },
+            "Military resources": {
+                "Plane": 0,
+                "Tank": 0,
+                "Drone": 0,
+                "Rocket": 0,
+                "Gun": 0
+            }
+        },
+        "Houston": {
+            "Energy resources": {
+                "Coal": 0,
+                "Firewood": 0,
+                "Gas": 0,
+                "Oil": 0,
+                "Uran": 0
+            },
+            "Industrial resources": {
+                "Semiconductor": 0,
+                "Bullet": 0,
+                "Engine": 0,
+                "Cement": 0,
+                "Plastic": 0
+            },
+            "Mineable resources": {
+                "Iron": 0,
+                "Aluminium": 0,
+                "Zinc": 0,
+                "Copper": 0,
+                "Silicon": 0
+            },
+            "Natural resources": {
+                "Wood": 0,
+                "Wheat": 0,
+                "Cotton": 0,
+                "Soil": 0,
+                "Water": 0
+            },
+            "Military resources": {
+                "Plane": 0,
+                "Tank": 0,
+                "Drone": 0,
+                "Rocket": 0,
+                "Gun": 0
+            }
+        },
+        "Vancouver": {
+            "Energy resources": {
+                "Coal": 0,
+                "Firewood": 0,
+                "Gas": 0,
+                "Oil": 0,
+                "Uran": 0
+            },
+            "Industrial resources": {
+                "Semiconductor": 0,
+                "Bullet": 0,
+                "Engine": 0,
+                "Cement": 0,
+                "Plastic": 0
+            },
+            "Mineable resources": {
+                "Iron": 0,
+                "Aluminium": 0,
+                "Zinc": 0,
+                "Copper": 0,
+                "Silicon": 0
+            },
+            "Natural resources": {
+                "Wood": 0,
+                "Wheat": 0,
+                "Cotton": 0,
+                "Soil": 0,
+                "Water": 0
+            },
+            "Military resources": {
+                "Plane": 0,
+                "Tank": 0,
+                "Drone": 0,
+                "Rocket": 0,
+                "Gun": 0
+            }
+        },
+        "Santos": {
+            "Energy resources": {
+                "Coal": 0,
+                "Firewood": 0,
+                "Gas": 0,
+                "Oil": 0,
+                "Uran": 0
+            },
+            "Industrial resources": {
+                "Semiconductor": 0,
+                "Bullet": 0,
+                "Engine": 0,
+                "Cement": 0,
+                "Plastic": 0
+            },
+            "Mineable resources": {
+                "Iron": 0,
+                "Aluminium": 0,
+                "Zinc": 0,
+                "Copper": 0,
+                "Silicon": 0
+            },
+            "Natural resources": {
+                "Wood": 0,
+                "Wheat": 0,
+                "Cotton": 0,
+                "Soil": 0,
+                "Water": 0
+            },
+            "Military resources": {
+                "Plane": 0,
+                "Tank": 0,
+                "Drone": 0,
+                "Rocket": 0,
+                "Gun": 0
+            }
+        },
+        "Callao": {
+            "Energy resources": {
+                "Coal": 0,
+                "Firewood": 0,
+                "Gas": 0,
+                "Oil": 0,
+                "Uran": 0
+            },
+            "Industrial resources": {
+                "Semiconductor": 0,
+                "Bullet": 0,
+                "Engine": 0,
+                "Cement": 0,
+                "Plastic": 0
+            },
+            "Mineable resources": {
+                "Iron": 0,
+                "Aluminium": 0,
+                "Zinc": 0,
+                "Copper": 0,
+                "Silicon": 0
+            },
+            "Natural resources": {
+                "Wood": 0,
+                "Wheat": 0,
+                "Cotton": 0,
+                "Soil": 0,
+                "Water": 0
+            },
+            "Military resources": {
+                "Plane": 0,
+                "Tank": 0,
+                "Drone": 0,
+                "Rocket": 0,
+                "Gun": 0
+            }
+        },
+        "Colon": {
+            "Energy resources": {
+                "Coal": 0,
+                "Firewood": 0,
+                "Gas": 0,
+                "Oil": 0,
+                "Uran": 0
+            },
+            "Industrial resources": {
+                "Semiconductor": 0,
+                "Bullet": 0,
+                "Engine": 0,
+                "Cement": 0,
+                "Plastic": 0
+            },
+            "Mineable resources": {
+                "Iron": 0,
+                "Aluminium": 0,
+                "Zinc": 0,
+                "Copper": 0,
+                "Silicon": 0
+            },
+            "Natural resources": {
+                "Wood": 0,
+                "Wheat": 0,
+                "Cotton": 0,
+                "Soil": 0,
+                "Water": 0
+            },
+            "Military resources": {
+                "Plane": 0,
+                "Tank": 0,
+                "Drone": 0,
+                "Rocket": 0,
+                "Gun": 0
+            }
+        },
+        "Shanghai": {
+            "Energy resources": {
+                "Coal": 0,
+                "Firewood": 0,
+                "Gas": 0,
+                "Oil": 0,
+                "Uran": 0
+            },
+            "Industrial resources": {
+                "Semiconductor": 0,
+                "Bullet": 0,
+                "Engine": 0,
+                "Cement": 0,
+                "Plastic": 0
+            },
+            "Mineable resources": {
+                "Iron": 0,
+                "Aluminium": 0,
+                "Zinc": 0,
+                "Copper": 0,
+                "Silicon": 0
+            },
+            "Natural resources": {
+                "Wood": 0,
+                "Wheat": 0,
+                "Cotton": 0,
+                "Soil": 0,
+                "Water": 0
+            },
+            "Military resources": {
+                "Plane": 0,
+                "Tank": 0,
+                "Drone": 0,
+                "Rocket": 0,
+                "Gun": 0
+            }
+        },
+        "Jebel Ali": {
+            "Energy resources": {
+                "Coal": 0,
+                "Firewood": 0,
+                "Gas": 0,
+                "Oil": 0,
+                "Uran": 0
+            },
+            "Industrial resources": {
+                "Semiconductor": 0,
+                "Bullet": 0,
+                "Engine": 0,
+                "Cement": 0,
+                "Plastic": 0
+            },
+            "Mineable resources": {
+                "Iron": 0,
+                "Aluminium": 0,
+                "Zinc": 0,
+                "Copper": 0,
+                "Silicon": 0
+            },
+            "Natural resources": {
+                "Wood": 0,
+                "Wheat": 0,
+                "Cotton": 0,
+                "Soil": 0,
+                "Water": 0
+            },
+            "Military resources": {
+                "Plane": 0,
+                "Tank": 0,
+                "Drone": 0,
+                "Rocket": 0,
+                "Gun": 0
+            }
+        },
+        "Mumbai": {
+            "Energy resources": {
+                "Coal": 0,
+                "Firewood": 0,
+                "Gas": 0,
+                "Oil": 0,
+                "Uran": 0
+            },
+            "Industrial resources": {
+                "Semiconductor": 0,
+                "Bullet": 0,
+                "Engine": 0,
+                "Cement": 0,
+                "Plastic": 0
+            },
+            "Mineable resources": {
+                "Iron": 0,
+                "Aluminium": 0,
+                "Zinc": 0,
+                "Copper": 0,
+                "Silicon": 0
+            },
+            "Natural resources": {
+                "Wood": 0,
+                "Wheat": 0,
+                "Cotton": 0,
+                "Soil": 0,
+                "Water": 0
+            },
+            "Military resources": {
+                "Plane": 0,
+                "Tank": 0,
+                "Drone": 0,
+                "Rocket": 0,
+                "Gun": 0
+            }
+        },
+        "Yokohama": {
+            "Energy resources": {
+                "Coal": 0,
+                "Firewood": 0,
+                "Gas": 0,
+                "Oil": 0,
+                "Uran": 0
+            },
+            "Industrial resources": {
+                "Semiconductor": 0,
+                "Bullet": 0,
+                "Engine": 0,
+                "Cement": 0,
+                "Plastic": 0
+            },
+            "Mineable resources": {
+                "Iron": 0,
+                "Aluminium": 0,
+                "Zinc": 0,
+                "Copper": 0,
+                "Silicon": 0
+            },
+            "Natural resources": {
+                "Wood": 0,
+                "Wheat": 0,
+                "Cotton": 0,
+                "Soil": 0,
+                "Water": 0
+            },
+            "Military resources": {
+                "Plane": 0,
+                "Tank": 0,
+                "Drone": 0,
+                "Rocket": 0,
+                "Gun": 0
+            }
+        },
+        "Tanger-Med": {
+            "Energy resources": {
+                "Coal": 0,
+                "Firewood": 0,
+                "Gas": 0,
+                "Oil": 0,
+                "Uran": 0
+            },
+            "Industrial resources": {
+                "Semiconductor": 0,
+                "Bullet": 0,
+                "Engine": 0,
+                "Cement": 0,
+                "Plastic": 0
+            },
+            "Mineable resources": {
+                "Iron": 0,
+                "Aluminium": 0,
+                "Zinc": 0,
+                "Copper": 0,
+                "Silicon": 0
+            },
+            "Natural resources": {
+                "Wood": 0,
+                "Wheat": 0,
+                "Cotton": 0,
+                "Soil": 0,
+                "Water": 0
+            },
+            "Military resources": {
+                "Plane": 0,
+                "Tank": 0,
+                "Drone": 0,
+                "Rocket": 0,
+                "Gun": 0
+            }
+        },
+        "Port Said": {
+            "Energy resources": {
+                "Coal": 0,
+                "Firewood": 0,
+                "Gas": 0,
+                "Oil": 0,
+                "Uran": 0
+            },
+            "Industrial resources": {
+                "Semiconductor": 0,
+                "Bullet": 0,
+                "Engine": 0,
+                "Cement": 0,
+                "Plastic": 0
+            },
+            "Mineable resources": {
+                "Iron": 0,
+                "Aluminium": 0,
+                "Zinc": 0,
+                "Copper": 0,
+                "Silicon": 0
+            },
+            "Natural resources": {
+                "Wood": 0,
+                "Wheat": 0,
+                "Cotton": 0,
+                "Soil": 0,
+                "Water": 0
+            },
+            "Military resources": {
+                "Plane": 0,
+                "Tank": 0,
+                "Drone": 0,
+                "Rocket": 0,
+                "Gun": 0
+            }
+        },
+        "Durban Port": {
+            "Energy resources": {
+                "Coal": 0,
+                "Firewood": 0,
+                "Gas": 0,
+                "Oil": 0,
+                "Uran": 0
+            },
+            "Industrial resources": {
+                "Semiconductor": 0,
+                "Bullet": 0,
+                "Engine": 0,
+                "Cement": 0,
+                "Plastic": 0
+            },
+            "Mineable resources": {
+                "Iron": 0,
+                "Aluminium": 0,
+                "Zinc": 0,
+                "Copper": 0,
+                "Silicon": 0
+            },
+            "Natural resources": {
+                "Wood": 0,
+                "Wheat": 0,
+                "Cotton": 0,
+                "Soil": 0,
+                "Water": 0
+            },
+            "Military resources": {
+                "Plane": 0,
+                "Tank": 0,
+                "Drone": 0,
+                "Rocket": 0,
+                "Gun": 0
+            }
+        },
+        "Neko": {
+            "Energy resources": {
+                "Coal": 0,
+                "Firewood": 0,
+                "Gas": 0,
+                "Oil": 0,
+                "Uran": 0
+            },
+            "Industrial resources": {
+                "Semiconductor": 0,
+                "Bullet": 0,
+                "Engine": 0,
+                "Cement": 0,
+                "Plastic": 0
+            },
+            "Mineable resources": {
+                "Iron": 0,
+                "Aluminium": 0,
+                "Zinc": 0,
+                "Copper": 0,
+                "Silicon": 0
+            },
+            "Natural resources": {
+                "Wood": 0,
+                "Wheat": 0,
+                "Cotton": 0,
+                "Soil": 0,
+                "Water": 0
+            },
+            "Military resources": {
+                "Plane": 0,
+                "Tank": 0,
+                "Drone": 0,
+                "Rocket": 0,
+                "Gun": 0
+            }
+        },
+        "Sydney": {
+            "Energy resources": {
+                "Coal": 0,
+                "Firewood": 0,
+                "Gas": 0,
+                "Oil": 0,
+                "Uran": 0
+            },
+            "Industrial resources": {
+                "Semiconductor": 0,
+                "Bullet": 0,
+                "Engine": 0,
+                "Cement": 0,
+                "Plastic": 0
+            },
+            "Mineable resources": {
+                "Iron": 0,
+                "Aluminium": 0,
+                "Zinc": 0,
+                "Copper": 0,
+                "Silicon": 0
+            },
+            "Natural resources": {
+                "Wood": 0,
+                "Wheat": 0,
+                "Cotton": 0,
+                "Soil": 0,
+                "Water": 0
+            },
+            "Military resources": {
+                "Plane": 0,
+                "Tank": 0,
+                "Drone": 0,
+                "Rocket": 0,
+                "Gun": 0
+            }
+        }
+    }
+}
