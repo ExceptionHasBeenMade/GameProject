@@ -137,7 +137,7 @@
         },
         "Los Angeles": {
             "Coal": 0,
-            "Firewood": 0,
+            "Firewood": 1000,
             "Gas": 0,
             "Oil": 0,
             "Uran": 0,

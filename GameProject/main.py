@@ -7,6 +7,7 @@ pathOfResources = "./GameProject/data/resources.json"
 pathOfSettings = "./GameProject/data/settings.json"
 pathOfOwns = "./GameProject/data/owns.json"
 pathOfCargo = "./GameProject/data/cargo.json"
+pathOfMagazine = "./GameProject/data/magazine.json"
 
 connector = open(pathOfResources)
 importedResources = json.load(connector)
@@ -30,6 +31,10 @@ connector.close()
 
 connector = open(pathOfCargo)
 importedCargo = json.load(connector)
+connector.close()
+
+connector = open(pathOfMagazine)
+importedMagazine = json.load(connector)
 connector.close()
 
 m1 = importedSettings["playerSettings"]["m1"]
@@ -255,6 +260,7 @@ while True:
                             input()
                             break
                         elif(shipNo1Destination == "None" and shipNo1IsLoading == False):
+                            actualPlace1 = importedConveyance["conveyance"]["ship_NO_1"][1]
                             while True:
                                 if(definitiveBroken == True):
                                     break
@@ -558,7 +564,9 @@ while True:
                                                             break
                                                         elif(0 < tempCargo < importedCargo["cargo"]["ship_NO_1"][tempDisembarked][1]):
                                                             importedCargo["cargo"]["ship_NO_1"][tempDisembarked][1] = importedCargo["cargo"]["ship_NO_1"][tempDisembarked][1] - tempCargo
+                                                            importedMagazine["magazine"][actualPlace1][tempDisembarked] = importedMagazine["magazine"][actualPlace1][tempDisembarked] + tempCargo
                                                             jsonClosing(importedCargo, pathOfCargo)
+                                                            jsonClosing(importedMagazine, pathOfMagazine)
                                                             reload()
                                                             break
                                                             
