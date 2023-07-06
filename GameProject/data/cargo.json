@@ -9,12 +9,12 @@
                 "Firewood",
                 14000
             ],
-            "Gas": [
-                "Gas",
+            "Natural Gas": [
+                "Natural Gas",
                 0
             ],
-            "Oil": [
-                "Oil",
+            "Crude Oil": [
+                "Crude Oil",
                 0
             ],
             "Uran": [
@@ -25,8 +25,8 @@
                 "Semiconductor",
                 0
             ],
-            "Bullet": [
-                "Bullet",
+            "Steel": [
+                "Steel",
                 0
             ],
             "Engine": [
@@ -111,12 +111,12 @@
                 "Firewood",
                 0
             ],
-            "Gas": [
-                "Gas",
+            "Natural Gas": [
+                "Natural Gas",
                 0
             ],
-            "Oil": [
-                "Oil",
+            "Crude Oil": [
+                "Crude Oil",
                 0
             ],
             "Uran": [
@@ -127,8 +127,8 @@
                 "Semiconductor",
                 0
             ],
-            "Bullet": [
-                "Bullet",
+            "Steel": [
+                "Steel",
                 0
             ],
             "Engine": [
@@ -218,14 +218,14 @@
                 ]
             },
             {
-                "Gas": [
-                    "Gas",
+                "Natural Gas": [
+                    "Natural Gas",
                     0
                 ]
             },
             {
-                "Oil": [
-                    "Oil",
+                "Crude Oil": [
+                    "Crude Oil",
                     0
                 ]
             },
@@ -242,8 +242,8 @@
                 ]
             },
             {
-                "Bullet": [
-                    "Bullet",
+                "Steel": [
+                    "Steel",
                     0
                 ]
             },
@@ -370,14 +370,14 @@
                 ]
             },
             {
-                "Gas": [
-                    "Gas",
+                "Natural Gas": [
+                    "Natural Gas",
                     0
                 ]
             },
             {
-                "Oil": [
-                    "Oil",
+                "Crude Oil": [
+                    "Crude Oil",
                     0
                 ]
             },
@@ -394,8 +394,8 @@
                 ]
             },
             {
-                "Bullet": [
-                    "Bullet",
+                "Steel": [
+                    "Steel",
                     0
                 ]
             },

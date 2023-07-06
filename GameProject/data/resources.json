@@ -13,14 +13,14 @@
                 2,
                 1
             ],
-            "Gas": [
-                "Gas",
+            "Natural Gas": [
+                "Natural Gas",
                 0,
                 900,
                 1
             ],
-            "Oil": [
-                "Oil",
+            "Crude Oil": [
+                "Crude Oil",
                 0,
                 500,
                 1
@@ -39,8 +39,8 @@
                 0,
                 0
             ],
-            "Bullet": [
-                "Bullet",
+            "Steel": [
+                "Steel",
                 0,
                 0,
                 0
