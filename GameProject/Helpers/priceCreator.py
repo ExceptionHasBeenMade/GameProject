@@ -27,16 +27,23 @@ for category in importedResources["resources"]:
             inaccessible = input(f"Pass chances (in %) of being inaccessible of {item}\n")
             importedPrices["price"].update({item : [float(price), unit, float(inaccessible)/100]})
         elif(i == 2):
-            pass
+            price = input(f"Pass price of {item}\n")
+            unit = input(f"Pass unit of {item}\n")
+
+            importedPrices["price"].update({item : [float(price), unit]})
+        elif(i == 3):
+            price = input(f"Pass price of {item}\n")
+            unit = input(f"Pass unit of {item}\n")
+            
+            importedPrices["price"].update({item : [float(price), unit]})
+        elif(i == 4):
+            price = input(f"Pass price of {item}\n")
+            unit = input(f"Pass unit of {item}\n")
+
+            importedPrices["price"].update({item : [float(price), unit]})
         else:
             continue
     i+=1
     connector = open(pathOfPrices, "w", encoding="utf-8")
     json.dump(importedPrices, connector)
     connector.close()
-
-
-
-
-
-
