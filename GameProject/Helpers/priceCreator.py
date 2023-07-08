@@ -12,35 +12,40 @@ importedPrices = json.load(connector)
 connector.close()
 
 # importedPrices = {"price" : {}}
-i = 0 
+i = 0
 
 for category in importedResources["resources"]:
     for item in importedResources["resources"][category]:
         if(i == 0):
-            price = input(f"Pass prices of {item}\n")
-            unit = input(f"Pass unit of {item}\n")
-            energyValue = input(f"Pass energy value of {item}\n") # In kWh/kg
-            importedPrices["price"].update({item : [float(price), unit, float(energyValue)]})
+            # price = input(f"Pass prices of {item}\n")
+            # unit = input(f"Pass unit of {item}\n")
+            # energyValue = input(f"Pass energy value of {item}\n") # In kWh/kg
+            # importedPrices["price"].update({item : [float(price), unit, float(energyValue)]})
+            pass
         elif(i == 1):
-            price = input(f"Pass price of {item}\n")
-            unit = input(f"Pass unit of {item}\n") # pc - one piece
-            inaccessible = input(f"Pass chances (in %) of being inaccessible of {item}\n")
-            importedPrices["price"].update({item : [float(price), unit, float(inaccessible)/100]})
+            # price = input(f"Pass price of {item}\n")
+            # unit = input(f"Pass unit of {item}\n") # pc - one piece
+            # inaccessible = input(f"Pass chances (in %) of being inaccessible of {item}\n")
+            # importedPrices["price"].update({item : [float(price), unit, float(inaccessible)/100]})
+            pass
         elif(i == 2):
-            price = input(f"Pass price of {item}\n")
-            unit = input(f"Pass unit of {item}\n")
-
-            importedPrices["price"].update({item : [float(price), unit]})
+            # price = input(f"Pass price of {item}\n")
+            # unit = input(f"Pass unit of {item}\n")
+            # meltingTemperature = input(f"Pass melting temperature of {item}\n")
+            # importedPrices["price"].update({item : [float(price), unit, int(meltingTemperature)]})
+            pass
         elif(i == 3):
             price = input(f"Pass price of {item}\n")
             unit = input(f"Pass unit of {item}\n")
-            
-            importedPrices["price"].update({item : [float(price), unit]})
+            costOfTramsport = input(f"\n")
+            importedPrices["price"].update({item : [float(price), unit, float(costOfTramsport)]})
+            pass
         elif(i == 4):
             price = input(f"Pass price of {item}\n")
             unit = input(f"Pass unit of {item}\n")
-
-            importedPrices["price"].update({item : [float(price), unit]})
+            transportAdaptationLevel = input(f"\n")
+            importedPrices["price"].update({item : [float(price), unit, int(transportAdaptationLevel)]})
+            pass
         else:
             continue
     i+=1
