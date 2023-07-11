@@ -37,13 +37,13 @@ for category in importedResources["resources"]:
         elif(i == 3):
             price = input(f"Pass price of {item}\n")
             unit = input(f"Pass unit of {item}\n")
-            costOfTramsport = input(f"\n")
-            importedPrices["price"].update({item : [float(price), unit, float(costOfTramsport)]})
+            costOfTramsport = input(f"Pass % of price advance of {item}\n")
+            importedPrices["price"].update({item : [float(price), unit, float(costOfTramsport)/100+1]})
             pass
         elif(i == 4):
             price = input(f"Pass price of {item}\n")
             unit = input(f"Pass unit of {item}\n")
-            transportAdaptationLevel = input(f"\n")
+            transportAdaptationLevel = input(f"Pass level of transporting place adaptation level for {item} transporting\n")
             importedPrices["price"].update({item : [float(price), unit, int(transportAdaptationLevel)]})
             pass
         else:
