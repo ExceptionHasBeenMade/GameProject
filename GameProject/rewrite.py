@@ -80,10 +80,23 @@ def reload():
 reload()
 
 optionList1 = ["M1. Resources informations", "M2. Transport details", "M3. Shop", "M5. Pass time", "M6. Settings"]
-gap = [0, 0, 0, 0, 1]
+gap1 = [0, 0, 0, 0, 1]
+
+optionList2 = ["M1. Energy resources", "M2. Industrial resources", "M3. Mineable resources", "M4. Natural resources", "M5. Military resources"]
 
 while True:
-    menu("M", "Information panel", 3, optionList1, gap=gap, cls=True, sleep=0.2)
+    menu("M", "Information panel", 3, optionList1, gap=gap1, sleep=0.2)
     selection = check(mList)
     if(selection == 0):
-        pass
+        menu("M", "Your resources", 2, optionList2)
+        selection = check(mList)
+
+
+
+#   print(" = Your resources = \n")
+#   print("M1.> Energy resources")
+#   print("M2.> Industrial resources")
+#   print("M3.> Mineable resources")
+#   print("M4.> Natural resources")
+#   print("M5.> Military resources\n")
+#   print("Press nubmer of resources type you want to see details or press esc to exit")
