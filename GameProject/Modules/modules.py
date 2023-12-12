@@ -71,6 +71,15 @@ def nextTurn(res = False, con = False):
                     importedConveyance["conveyance"][conveyance][1] = int(importedConveyance["conveyance"][conveyance][1]) - 1
             jsonClosing(importedConveyance, pathOfConveyance)
 
+def menu(mode, title, level, optionsList=[]):
+    if(mode == "M"):
+        print(" " + ("="*level) + " " + title + " " + ("="*level) + " ")
+        print("")
+        for option in range(len(optionsList)):
+            print()
+
+
+
 # for res in importedCargo["cargo"][conveyance][item]:
 #     for item in importedCargo["cargo"]:#[conveyance]:
 #         space = space + item[1]
