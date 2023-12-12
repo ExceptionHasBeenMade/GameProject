@@ -71,7 +71,7 @@ def nextTurn(res = False, con = False):
                     importedConveyance["conveyance"][conveyance][1] = int(importedConveyance["conveyance"][conveyance][1]) - 1
             jsonClosing(importedConveyance, pathOfConveyance)
 
-def menu(mode, title, level, optionsList, gap=[], cls=True, sleep=0):
+def menu(mode, title, level, optionsList, descriptionList=[], gap=[], cls=True, sleep=0):
     if(cls):
         os.system("cls")
     if(sleep > 0):
@@ -92,6 +92,24 @@ def menu(mode, title, level, optionsList, gap=[], cls=True, sleep=0):
                 print(optionsList[i])
         print("")
         print("Esc. Exit")
+    elif(mode == "ME"):
+        print(" " + ("="*level) + " " + title + " " + ("="*level) + " ")
+        print("")
+        for i in range(len(optionsList)):
+            if(gap != []):
+                try:
+                    if(gap[i] == 1):
+                        print("")
+                except:
+                    print(IndexError)
+                else:
+                    print(optionsList[i])
+            else:
+                print(optionsList[i])
+                
+                    print()
+
+
 
 def check(mList):
     while True:

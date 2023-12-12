@@ -56,26 +56,23 @@ broken1 = False
 definitiveBroken = False
 
 def reload():
-    global shipNo1Name, shipNo1Place, shipNo1Destination, shipNo1IsLoading, shipNo1MaxCapacity
-    global shipNo2Name, shipNo2Place, shipNo2Destination, shipNo2IsLoading, shipNo2MaxCapacity
-
-    shipNo1Name = importedConveyance["conveyance"]["ship_NO_1"][0]
-    shipNo1Place = str(importedConveyance["conveyance"]["ship_NO_1"][1])
+    global shipName, shipPlace, shipDestination, shipIsLoading, shipMaxCapacity
+    
     if(importedConveyance["conveyance"]["ship_NO_1"][2] == "None"):
         shipNo1Destination = "None"
     else:
         shipNo1Destination = importedConveyance["conveyance"]["ship_NO_1"][2]
-    shipNo1IsLoading = importedConveyance["conveyance"]["ship_NO_1"][3]
-    shipNo1MaxCapacity = importedConveyance["conveyance"]["ship_NO_1"][5]
 
-    shipNo2Name = importedConveyance["conveyance"]["ship_NO_2"][0]
-    shipNo2Place = str(importedConveyance["conveyance"]["ship_NO_2"][1])
     if(importedConveyance["conveyance"]["ship_NO_2"][2] == "None"):
         shipNo2Destination = "None"
     else:
         shipNo2Destination = importedConveyance["conveyance"]["ship_NO_2"][2]
-    shipNo2IsLoading = importedConveyance["conveyance"]["ship_NO_2"][3]
-    shipNo2MaxCapacity = importedConveyance["conveyance"]["ship_NO_2"][5]
+
+    shipName = [importedConveyance["conveyance"]["ship_NO_1"][0], importedConveyance["conveyance"]["ship_NO_2"][0]]
+    shipPlace = [str(importedConveyance["conveyance"]["ship_NO_1"][1]), str(importedConveyance["conveyance"]["ship_NO_2"][1])]
+    shipDestination = [shipNo1Destination, shipNo2Destination]
+    shipIsLoading = [importedConveyance["conveyance"]["ship_NO_1"][3], importedConveyance["conveyance"]["ship_NO_2"][3]]
+    shipMaxCapacity = [importedConveyance["conveyance"]["ship_NO_1"][5], importedConveyance["conveyance"]["ship_NO_2"][5]]
 
 reload()
 
@@ -88,15 +85,49 @@ while True:
     menu("M", "Information panel", 3, optionList1, gap=gap1, sleep=0.2)
     selection = check(mList)
     if(selection == 0):
-        menu("M", "Your resources", 2, optionList2)
-        selection = check(mList)
+        while True:
+            menu("M", "Your resources", 2, optionList2)
+            selection = check(mList)
+            if(selection == 0):
+                menu("ME", "Details of your energy resources", 1, optionList2)
+
+
+#  = Details of your energy resources =      
+
+# M1.> Coal ↓
+# Amount: 0
+# Extraction: 10, from: 1 extractor
+
+# M2.> Firewood ↓
+# Amount: 0
+# Extraction: 2, from: 1 extractor
+
+# M3.> Natural Gas ↓
+# Amount: 0
+# Extraction: 900, from: 1 extractor
+
+# M4.> Crude Oil ↓
+# Amount: 0
+# Extraction: 500, from: 1 extractor
+
+# M5.> Uran ↓
+# Amount: 0
+# Extraction: 0, from: 0 extractor
+
+# Which energy resource do you want to extend
 
 
 
-#   print(" = Your resources = \n")
-#   print("M1.> Energy resources")
-#   print("M2.> Industrial resources")
-#   print("M3.> Mineable resources")
-#   print("M4.> Natural resources")
-#   print("M5.> Military resources\n")
-#   print("Press nubmer of resources type you want to see details or press esc to exit")
+
+
+#  == Transport ==
+
+#  = Ships =
+# M1.> Ever Alot's status
+# This ship is in the Los Angeles
+# M2.> HMM Copenhagen's status
+# This ship is 5 turns far from Valencia
+
+#  = Airplanes =
+
+# Press number of conveyance you want to see details or press esc to exit
