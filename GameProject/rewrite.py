@@ -80,6 +80,20 @@ def reload():
 
 reload()
 
-menu("M", "Title", 3)
+optionList = ["M1. Resources informations", "M2. Transport details", "M3. Shop", "M5. Pass time", "M6. Settings"]
+gap = [0, 0, 0, 0, 1]
 
-input()
+menu("M", "Information panel", 3, optionList, gap=gap, cls=True)
+
+#     print(" === Information panel === ")
+#     print("")
+#     print("M1. == Resources informations == ")
+#     print("M2. == Transport details == ")
+#     print("M3. == Shop ==")
+#     print("M5. == Pass time == ")
+#     print("")
+#     print("M6. == Settings == ")
+#     print("")
+#     print("Esc. == Exit ==")
+#     print("")
+#     while True
