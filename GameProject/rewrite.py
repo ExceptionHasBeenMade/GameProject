@@ -1,5 +1,5 @@
 import json, time, os, keyboard, math#, multiprocessing
-from Modules.modules import nextTurn, jsonClosing, freeSpaceCounter, menu
+from Modules.modules import nextTurn, jsonClosing, freeSpaceCounter, menu, check
 
 pathOfConveyance = "./GameProject/data/conveyance.json"
 pathOfHarbors = "./GameProject/data/harbors.json"
@@ -44,6 +44,8 @@ m4 = importedSettings["playerSettings"]["m4"]
 m5 = importedSettings["playerSettings"]["m5"]
 m6 = importedSettings["playerSettings"]["m6"]
 
+mList = [m1, m2, m3, m4, m5, m6]
+
 multiplier = importedSettings["playerSettings"]["multiplier"]
 harborsList = importedHarbors["alls"]
 # airportsList = importedAirports["alls"]
@@ -52,9 +54,6 @@ money = importedOwns["player"]["money"][0]
 broken = False
 broken1 = False
 definitiveBroken = False
-
-x = 0
-i = 0
 
 def reload():
     global shipNo1Name, shipNo1Place, shipNo1Destination, shipNo1IsLoading, shipNo1MaxCapacity
@@ -80,7 +79,11 @@ def reload():
 
 reload()
 
-optionList = ["M1. Resources informations", "M2. Transport details", "M3. Shop", "M5. Pass time", "M6. Settings"]
+optionList1 = ["M1. Resources informations", "M2. Transport details", "M3. Shop", "M5. Pass time", "M6. Settings"]
 gap = [0, 0, 0, 0, 1]
 
-menu("M", "Information panel", 3, optionList, gap=gap, cls=True)
+while True:
+    menu("M", "Information panel", 3, optionList1, gap=gap, cls=True, sleep=0.2)
+    selection = check(mList)
+    if(selection == 0):
+        pass

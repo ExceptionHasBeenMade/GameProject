@@ -1,4 +1,4 @@
-import json, os, time#, keyboard, math
+import json, os, time, keyboard#, math
 
 pathOfConveyance = "./GameProject/data/conveyance.json"
 pathOfHarbors = "./GameProject/data/harbors.json"
@@ -89,6 +89,22 @@ def menu(mode, title, level, optionsList, gap=[], cls=False, sleep=0):
                 print(optionsList[i])
         print("")
         print("Esc. Exit")
+
+def check(mList):
+    while True:
+        if(keyboard.is_pressed(mList[0])):
+            return 0
+        elif(keyboard.is_pressed(mList[1])):
+            return 1
+        elif(keyboard.is_pressed(mList[2])):
+            return 2
+        elif(keyboard.is_pressed(mList[3])):
+            return 3
+        elif(keyboard.is_pressed(mList[4])):
+            return 4
+        elif(keyboard.is_pressed(mList[5])):
+            return 5
+
 
 # for res in importedCargo["cargo"][conveyance][item]:
 #     for item in importedCargo["cargo"]:#[conveyance]:

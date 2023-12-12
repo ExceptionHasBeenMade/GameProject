@@ -44,6 +44,8 @@ m4 = importedSettings["playerSettings"]["m4"]
 m5 = importedSettings["playerSettings"]["m5"]
 m6 = importedSettings["playerSettings"]["m6"]
 
+mList = [m1, m2, m3, m4, m5, m6]
+
 multiplier = importedSettings["playerSettings"]["multiplier"]
 harborsList = importedHarbors["alls"]
 # airportsList = importedAirports["alls"]
