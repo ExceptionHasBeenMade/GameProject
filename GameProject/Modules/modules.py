@@ -1,4 +1,4 @@
-import json, os, time, keyboard#, math
+import json, os, time, keyboard
 
 pathOfConveyance = "./GameProject/data/conveyance.json"
 pathOfHarbors = "./GameProject/data/harbors.json"
@@ -71,7 +71,7 @@ def nextTurn(res = False, con = False):
                     importedConveyance["conveyance"][conveyance][1] = int(importedConveyance["conveyance"][conveyance][1]) - 1
             jsonClosing(importedConveyance, pathOfConveyance)
 
-def menu(mode, title, level, optionsList, descriptionList=[], gap=[], cls=True, sleep=0):
+def menu(mode, title, level, optionsList, descriptionList=[], descriptionOperator=[], gap=[], cls=True, sleep=0):
     if(cls):
         os.system("cls")
     if(sleep > 0):
@@ -106,10 +106,12 @@ def menu(mode, title, level, optionsList, descriptionList=[], gap=[], cls=True, 
                     print(optionsList[i])
             else:
                 print(optionsList[i])
-                
-                    print()
-
-
+                for i in range(len(descriptionList)):
+                    if(descriptionList[i].find("\n") > -1):
+                        print(descriptionList[i][:-2] + descriptionOperator[i])
+                    else:
+                        print(descriptionList[i], end="")
+        input()
 
 def check(mList):
     while True:
@@ -125,7 +127,8 @@ def check(mList):
             return 4
         elif(keyboard.is_pressed(mList[5])):
             return 5
-
+        elif(keyboard.is_pressed("esc")):
+            return 6
 
 # for res in importedCargo["cargo"][conveyance][item]:
 #     for item in importedCargo["cargo"]:#[conveyance]:

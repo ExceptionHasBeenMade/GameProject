@@ -57,7 +57,7 @@ definitiveBroken = False
 
 def reload():
     global shipName, shipPlace, shipDestination, shipIsLoading, shipMaxCapacity
-    
+
     if(importedConveyance["conveyance"]["ship_NO_1"][2] == "None"):
         shipNo1Destination = "None"
     else:
@@ -81,15 +81,26 @@ gap1 = [0, 0, 0, 0, 1]
 
 optionList2 = ["M1. Energy resources", "M2. Industrial resources", "M3. Mineable resources", "M4. Natural resources", "M5. Military resources"]
 
+optionList3 = ["M1. Coal", "M2. Firewood", "M3. Natural Gas", "M4. Crude Oil", "M5. Uran"]
+descriptionList3 = ["Amount: \n", "Extraction: ", ", from: \n"]
+
 while True:
     menu("M", "Information panel", 3, optionList1, gap=gap1, sleep=0.2)
     selection = check(mList)
     if(selection == 0):
+        resourceChoice = "Energy resources"
         while True:
             menu("M", "Your resources", 2, optionList2)
             selection = check(mList)
             if(selection == 0):
-                menu("ME", "Details of your energy resources", 1, optionList2)
+                for resource in importedResources["resources"][resourceChoice]:
+                    amount = importedResources["resources"][resourceChoice][resource][1]
+                    extraction = importedResources["resources"][resourceChoice][resource][2]
+                    extractionPoints = importedResources["resources"][resourceChoice][resource][3]
+                descriptionOperator3 = [str(amount)]
+                menu("ME", "Details of your energy resources", 1, optionList3, descriptionList=descriptionList3, descriptionOperator=descriptionOperator3)
+            if(selection == 6):
+                break
 
 
 #  = Details of your energy resources =      
@@ -115,7 +126,6 @@ while True:
 # Extraction: 0, from: 0 extractor
 
 # Which energy resource do you want to extend
-
 
 
 
