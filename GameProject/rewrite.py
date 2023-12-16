@@ -82,7 +82,8 @@ gap1 = [0, 0, 0, 0, 1]
 optionList2 = ["M1. Energy resources", "M2. Industrial resources", "M3. Mineable resources", "M4. Natural resources", "M5. Military resources"]
 
 optionList3 = ["M1. Coal", "M2. Firewood", "M3. Natural Gas", "M4. Crude Oil", "M5. Uran"]
-descriptionList3 = ["Amount: \n", "Extraction: ", ", from: \n"]
+descriptionList3 = ["Amount: \n", "Extraction: ", ", from extractors: \n"]
+descriptionOperator3 = []
 
 while True:
     menu("M", "Information panel", 3, optionList1, gap=gap1, sleep=0.2)
@@ -97,8 +98,9 @@ while True:
                     amount = importedResources["resources"][resourceChoice][resource][1]
                     extraction = importedResources["resources"][resourceChoice][resource][2]
                     extractionPoints = importedResources["resources"][resourceChoice][resource][3]
-                descriptionOperator3 = [str(amount)]
-                menu("ME", "Details of your energy resources", 1, optionList3, descriptionList=descriptionList3, descriptionOperator=descriptionOperator3)
+                    descriptionOperator3.append([str(amount), str(extraction), str(extractionPoints)])
+                menu("ForItem", "Details of your energy resources", 1, optionList3, descriptionList=descriptionList3, descriptionOperator=descriptionOperator3)
+                
             if(selection == 6):
                 break
 

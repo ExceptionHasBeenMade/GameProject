@@ -31,11 +31,6 @@ connector = open(pathOfCargo)
 importedCargo = json.load(connector)
 connector.close()
 
-def jsonClosing(variable, path):
-    connector = open(path, "w", encoding="utf-8")
-    json.dump(variable, connector)
-    connector.close()
-
 def freeSpaceCounter(conveyance, space = 0):
     connector = open(pathOfCargo)
     importedCargo = json.load(connector)
@@ -92,7 +87,7 @@ def menu(mode, title, level, optionsList, descriptionList=[], descriptionOperato
                 print(optionsList[i])
         print("")
         print("Esc. Exit")
-    elif(mode == "ME"):
+    elif(mode == "ForItem"):
         print(" " + ("="*level) + " " + title + " " + ("="*level) + " ")
         print("")
         for i in range(len(optionsList)):
@@ -108,9 +103,11 @@ def menu(mode, title, level, optionsList, descriptionList=[], descriptionOperato
                 print(optionsList[i])
                 for i in range(len(descriptionList)):
                     if(descriptionList[i].find("\n") > -1):
-                        print(descriptionList[i][:-2] + descriptionOperator[i])
+                        print(descriptionList[i][:-1] + descriptionOperator[i][i])
+                        print(descriptionList[i+1] + descriptionOperator[i][i+1], end="")
+                        print(descriptionList[i+2] + descriptionOperator[i][i+2])
                     else:
-                        print(descriptionList[i], end="")
+                        print(descriptionList[i] + descriptionOperator[i][i], end="")
         input()
 
 def check(mList):
@@ -129,6 +126,11 @@ def check(mList):
             return 5
         elif(keyboard.is_pressed("esc")):
             return 6
+
+def jsonClosing(variable, path):
+    connector = open(path, "w", encoding="utf-8")
+    json.dump(variable, connector)
+    connector.close()
 
 # for res in importedCargo["cargo"][conveyance][item]:
 #     for item in importedCargo["cargo"]:#[conveyance]:
