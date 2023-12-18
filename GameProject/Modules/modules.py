@@ -105,6 +105,7 @@ def menu(mode, title, level, optionsList, descriptionList=[], descriptionOperato
                 print("")
 
 def check(mList):
+    time.sleep(0.2)
     while True:
         if(keyboard.is_pressed(mList[0])):
             return 0

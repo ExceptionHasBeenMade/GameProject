@@ -106,11 +106,37 @@ while True:
                 print("Which energy resource do you want to extend")
                 selection = check(mList)
                 if(selection == 0):
-                    pass
+                    extraction = importedResources["resources"][resourceChoice]["Coal"][2]
+                    extractionPoints = importedResources["resources"][resourceChoice]["Coal"][3]
+                    os.system("cls")
+                    print("You actually have " + str(extractionPoints) + " coal extractors")
+                    costOfNewExtractor = math.pow(extractionPoints, 2)*math.pow(extraction, 2)*10
+                    if(money >= costOfNewExtractor):
+                        print("It's possible to build up another extractor point for " + str(costOfNewExtractor) + "\n\nPress Enter for cofirm or Escape for exit")
+                        while True:
+                            time.sleep(0.2)
+                            if(keyboard.is_pressed("Enter")):
+                                money = money - costOfNewExtractor
+                                extractionPoints = extractionPoints + 1
+                                extraction = extractionPoints * 10
+                                importedResources["resources"][resourceChoice]["Coal"][2] = extraction
+                                importedResources["resources"][resourceChoice]["Coal"][3] = extractionPoints
+                                importedOwns["player"]["money"][0] = money
+                                jsonClosing(importedOwns, pathOfOwns)
+                                jsonClosing(importedResources, pathOfResources)
+                                broken = True
+                                break
+                            elif(keyboard.is_pressed("Escape")):
+                                break
+                    else:
+                        print("You haven't enought money to build this extractor")
+                        time.sleep(1.5)
+                        break
                 if(selection == 6):
                     selection = -1
                     break
-
+            if(selection == 1):
+                pass
             if(selection == 6):
                 selection = -1
                 break
@@ -118,41 +144,34 @@ while True:
         break
 
 
-#  = Details of your energy resources =      
-
-# M1.> Coal ↓
-# Amount: 0
-# Extraction: 10, from: 1 extractor
-
-# M2.> Firewood ↓
-# Amount: 0
-# Extraction: 2, from: 1 extractor
-
-# M3.> Natural Gas ↓
-# Amount: 0
-# Extraction: 900, from: 1 extractor
-
-# M4.> Crude Oil ↓
-# Amount: 0
-# Extraction: 500, from: 1 extractor
-
-# M5.> Uran ↓
-# Amount: 0
-# Extraction: 0, from: 0 extractor
-
-# Which energy resource do you want to extend
-
-
-
-
-#  == Transport ==
-
-#  = Ships =
-# M1.> Ever Alot's status
-# This ship is in the Los Angeles
-# M2.> HMM Copenhagen's status
-# This ship is 5 turns far from Valencia
-
-#  = Airplanes =
-
-# Press number of conveyance you want to see details or press esc to exit
+    # extraction = importedResources["resources"][resourceChoice]["Coal"][2]
+    # extractionPoints = importedResources["resources"][resourceChoice]["Coal"][3]
+    # os.system("cls")
+    # print("You actually have " + str(extractionPoints) + " coal extractors")
+    # costOfNewExtractor = math.pow(extractionPoints, 2)*math.pow(extraction, 2)*10
+    # if(money >= costOfNewExtractor):
+    #     print("It's possible to build up another extractor point for " + str(costOfNewExtractor) + "\n\nPress Enter for cofirm or Escape for exit")
+    #     while True:
+    #         if(keyboard.is_pressed("Enter")):
+    #             money = money - costOfNewExtractor
+    #             extractionPoints = extractionPoints + 1
+    #             extraction = extractionPoints * 10
+    #             importedResources["resources"][resourceChoice]["Coal"][2] = extraction
+    #             importedResources["resources"][resourceChoice]["Coal"][3] = extractionPoints
+    #             importedOwns["player"]["money"][0] = money
+    #             jsonClosing(importedOwns, pathOfOwns)
+    #             jsonClosing(importedResources, pathOfResources)
+    #             broken = True
+    #             break
+    #         elif(keyboard.is_pressed("Escape")):
+    #             break
+    # else:
+    #     print("You haven't enought money to build this extractor")
+    #     time.sleep(1.5)
+    #     break
+    # while True:
+    #     if(keyboard.is_pressed("Enter")):
+    #         break
+    #     elif(keyboard.is_pressed("Escape") or broken == True):
+    #         x = 1
+    #         break
