@@ -86,11 +86,13 @@ descriptionList3 = ["Amount: ", "Extraction: ", "Extractors: "]
 descriptionOperator3 = []
 
 while True:
-    menu("M", "Information panel", 3, optionList1, gap=gap1, sleep=0.2)
+    time.sleep(0.2)
+    menu("M", "Information panel", 3, optionList1, gap=gap1)
     selection = check(mList)
     if(selection == 0):
         resourceChoice = "Energy resources"
         while True:
+            time.sleep(0.2)
             menu("M", "Your resources", 2, optionList2)
             selection = check(mList)
             if(selection == 0):
@@ -103,9 +105,17 @@ while True:
                 print("")
                 print("Which energy resource do you want to extend")
                 selection = check(mList)
+                if(selection == 0):
+                    pass
+                if(selection == 6):
+                    selection = -1
+                    break
 
             if(selection == 6):
+                selection = -1
                 break
+    if(selection == 6):
+        break
 
 
 #  = Details of your energy resources =      
