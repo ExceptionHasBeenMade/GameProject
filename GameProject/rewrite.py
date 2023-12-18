@@ -85,17 +85,21 @@ optionList3 = ["M1. Coal", "M2. Firewood", "M3. Natural Gas", "M4. Crude Oil", "
 descriptionList3 = ["Amount: ", "Extraction: ", "Extractors: "]
 descriptionOperator3 = []
 
+optionList4 = ["M1.> Ever Alot's status", "", "M2.> HMM Copenhagen's status", ""]
+
+emptyList = []
+
 while True:
     time.sleep(0.2)
     menu("M", "Information panel", 3, optionList1, gap=gap1)
     selection = check(mList)
     if(selection == 0):
-        resourceChoice = "Energy resources"
         while True:
             time.sleep(0.2)
             menu("M", "Your resources", 2, optionList2)
             selection = check(mList)
             if(selection == 0):
+                resourceChoice = "Energy resources"
                 for resource in importedResources["resources"][resourceChoice]:
                     amount = importedResources["resources"][resourceChoice][resource][1]
                     extraction = importedResources["resources"][resourceChoice][resource][2]
@@ -140,9 +144,17 @@ while True:
             if(selection == 6):
                 selection = -1
                 break
-    if(selection == 2):
-        pass
+    if(selection == 1):
+        while True:
+            time.sleep(0.2)
+            menu("M", "Transport", 2, emptyList)
+            for i in range(1):
+                if(shipDestination[i] == "None"):
+                    optionList4[int(2*i+2)] = "This ship is in the " + shipPlace[i]
+                else:
+                    optionList4[int(2*i+2)] = "This ship is " + str(shipPlace[i]) + (" turns" if int(shipPlace[i])>1 else " turn") + " far from " + shipDestination[i]
+            menu("M", "Ships", 1, optionList4)
+            selection = check(mList)
+
     if(selection == 6):
         break
-
-
