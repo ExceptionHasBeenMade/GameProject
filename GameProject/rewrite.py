@@ -82,7 +82,7 @@ gap1 = [0, 0, 0, 0, 1]
 optionList2 = ["M1. Energy resources", "M2. Industrial resources", "M3. Mineable resources", "M4. Natural resources", "M5. Military resources"]
 
 optionList3 = ["M1. Coal", "M2. Firewood", "M3. Natural Gas", "M4. Crude Oil", "M5. Uran"]
-descriptionList3 = ["Amount: \n", "Extraction: ", ", from extractors: \n"]
+descriptionList3 = ["Amount: ", "Extraction: ", "Extractors: "]
 descriptionOperator3 = []
 
 while True:
