@@ -140,38 +140,9 @@ while True:
             if(selection == 6):
                 selection = -1
                 break
+    if(selection == 2):
+        pass
     if(selection == 6):
         break
 
 
-    # extraction = importedResources["resources"][resourceChoice]["Coal"][2]
-    # extractionPoints = importedResources["resources"][resourceChoice]["Coal"][3]
-    # os.system("cls")
-    # print("You actually have " + str(extractionPoints) + " coal extractors")
-    # costOfNewExtractor = math.pow(extractionPoints, 2)*math.pow(extraction, 2)*10
-    # if(money >= costOfNewExtractor):
-    #     print("It's possible to build up another extractor point for " + str(costOfNewExtractor) + "\n\nPress Enter for cofirm or Escape for exit")
-    #     while True:
-    #         if(keyboard.is_pressed("Enter")):
-    #             money = money - costOfNewExtractor
-    #             extractionPoints = extractionPoints + 1
-    #             extraction = extractionPoints * 10
-    #             importedResources["resources"][resourceChoice]["Coal"][2] = extraction
-    #             importedResources["resources"][resourceChoice]["Coal"][3] = extractionPoints
-    #             importedOwns["player"]["money"][0] = money
-    #             jsonClosing(importedOwns, pathOfOwns)
-    #             jsonClosing(importedResources, pathOfResources)
-    #             broken = True
-    #             break
-    #         elif(keyboard.is_pressed("Escape")):
-    #             break
-    # else:
-    #     print("You haven't enought money to build this extractor")
-    #     time.sleep(1.5)
-    #     break
-    # while True:
-    #     if(keyboard.is_pressed("Enter")):
-    #         break
-    #     elif(keyboard.is_pressed("Escape") or broken == True):
-    #         x = 1
-    #         break
