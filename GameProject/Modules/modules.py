@@ -100,14 +100,11 @@ def menu(mode, title, level, optionsList, descriptionList=[], descriptionOperato
                 else:
                     print(optionsList[i])
             else:
-                print(optionsList[i])
-                for i in range(len(descriptionList)):
-                    if(descriptionList[i].find("\n") > -1):
-                        print(descriptionList[i][:-1] + descriptionOperator[i][i])
-                        print(descriptionList[i+1] + descriptionOperator[i][i+1], end="")
-                        print(descriptionList[i+2] + descriptionOperator[i][i+2])
-                    else:
-                        print(descriptionList[i] + descriptionOperator[i][i], end="")
+                # print(optionsList[i])
+                # for i in range(len(optionsList)):
+                for x in range(len(descriptionList)):
+                    print(descriptionList[x][:-1] + descriptionOperator[i][x])
+
         input()
 
 def check(mList):
