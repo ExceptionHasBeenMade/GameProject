@@ -100,7 +100,10 @@ while True:
                     extractionPoints = importedResources["resources"][resourceChoice][resource][3]
                     descriptionOperator3.append([str(amount), str(extraction), str(extractionPoints)])
                 menu("ForItem", "Details of your energy resources", 1, optionList3, descriptionList=descriptionList3, descriptionOperator=descriptionOperator3)
-                
+                print("")
+                print("Which energy resource do you want to extend")
+                selection = check(mList)
+
             if(selection == 6):
                 break
 
