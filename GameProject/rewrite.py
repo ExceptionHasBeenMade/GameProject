@@ -79,9 +79,9 @@ reload()
 optionList1 = ["M1. Resources informations", "M2. Transport details", "M3. Shop", "M5. Pass time", "M6. Settings"]
 gap1 = [0, 0, 0, 0, 1]
 
-optionList2 = ["M1. Energy resources", "M2. Industrial resources", "M3. Mineable resources", "M4. Natural resources", "M5. Military resources"]
+optionList2 = ["M1.> Energy resources", "M2.> Industrial resources", "M3.> Mineable resources", "M4.> Natural resources", "M5.> Military resources"]
 
-optionList3 = ["M1. Coal", "M2. Firewood", "M3. Natural Gas", "M4. Crude Oil", "M5. Uran"]
+optionList3 = ["M1.> Coal", "M2.> Firewood", "M3.> Natural Gas", "M4.> Crude Oil", "M5.> Uran"]
 descriptionList3 = ["Amount: ", "Extraction: ", "Extractors: "]
 descriptionOperator3 = []
 
@@ -155,6 +155,9 @@ while True:
                     optionList4[int(2*i+1)] = "This ship is " + str(shipPlace[i]) + (" turns" if int(shipPlace[i])>1 else " turn") + " far from " + shipDestination[i]
             menu("M", "Ships", 1, optionList4, cls=False)
             selection = check(mList)
+            if(selection == 6):
+                selection = -1
+                break
 
     if(selection == 6):
         break
