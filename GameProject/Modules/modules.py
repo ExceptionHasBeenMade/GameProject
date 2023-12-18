@@ -66,7 +66,7 @@ def nextTurn(res = False, con = False):
                     importedConveyance["conveyance"][conveyance][1] = int(importedConveyance["conveyance"][conveyance][1]) - 1
             jsonClosing(importedConveyance, pathOfConveyance)
 
-def menu(mode, title, level, optionsList, descriptionList=[], descriptionOperator=[], gap=[], cls=True):
+def menu(mode, title, level, optionsList, descriptionList=[], descriptionOperator=[], gap=[], cls=True, esc=True):
     if(cls):
         os.system("cls")
     if(mode == "M"):
@@ -83,8 +83,9 @@ def menu(mode, title, level, optionsList, descriptionList=[], descriptionOperato
                     print(optionsList[i])
             else:
                 print(optionsList[i])
-        print("")
-        print("Esc. Exit")
+        if(esc):
+            print("")
+            print("Esc. Exit")
     elif(mode == "ForItem"):
         print(" " + ("="*level) + " " + title + " " + ("="*level) + " ")
         print("")

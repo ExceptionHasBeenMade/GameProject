@@ -147,13 +147,13 @@ while True:
     if(selection == 1):
         while True:
             time.sleep(0.2)
-            menu("M", "Transport", 2, emptyList)
-            for i in range(1):
+            menu("M", "Transport", 2, emptyList, esc=False)
+            for i in range(2):
                 if(shipDestination[i] == "None"):
-                    optionList4[int(2*i+2)] = "This ship is in the " + shipPlace[i]
+                    optionList4[int(2*i+1)] = "This ship is in the " + shipPlace[i]
                 else:
-                    optionList4[int(2*i+2)] = "This ship is " + str(shipPlace[i]) + (" turns" if int(shipPlace[i])>1 else " turn") + " far from " + shipDestination[i]
-            menu("M", "Ships", 1, optionList4)
+                    optionList4[int(2*i+1)] = "This ship is " + str(shipPlace[i]) + (" turns" if int(shipPlace[i])>1 else " turn") + " far from " + shipDestination[i]
+            menu("M", "Ships", 1, optionList4, cls=False)
             selection = check(mList)
 
     if(selection == 6):
